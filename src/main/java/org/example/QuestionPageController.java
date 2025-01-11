@@ -1,5 +1,6 @@
 package org.example;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -11,13 +12,13 @@ public class QuestionPageController {
     @FXML
     private Label questionLabel;
     @FXML
-    private Button option1Button;
+    private Button optionA;
     @FXML
-    private Button option2Button;
+    private Button optionB;
     @FXML
-    private Button option3Button;
+    private Button optionC;
     @FXML
-    private Button option4Button;
+    private Button optionD;
 
     private List<Question> questions;
     private int currentQuestionIndex = 0;
@@ -32,32 +33,32 @@ public class QuestionPageController {
         if (currentQuestionIndex < questions.size()) {
             Question currentQuestion = questions.get(currentQuestionIndex);
             questionLabel.setText(currentQuestion.getQuestionText());
-            option1Button.setText(currentQuestion.getOptions().get(0));
-            option2Button.setText(currentQuestion.getOptions().get(1));
-            option3Button.setText(currentQuestion.getOptions().get(2));
-            option4Button.setText(currentQuestion.getOptions().get(3));
+            optionA.setText(currentQuestion.getOptions().get(0));
+            optionB.setText(currentQuestion.getOptions().get(1));
+            optionC.setText(currentQuestion.getOptions().get(2));
+            optionD.setText(currentQuestion.getOptions().get(3));
         } else {
             questionLabel.setText("Game Over!");
         }
     }
 
     @FXML
-    private void handleOption1() {
+    private void handleOptionA() {
         checkAnswer(0);
     }
 
     @FXML
-    private void handleOption2() {
+    private void handleOptionB() {
         checkAnswer(1);
     }
 
     @FXML
-    private void handleOption3() {
+    private void handleOptionC() {
         checkAnswer(2);
     }
 
     @FXML
-    private void handleOption4() {
+    private void handleOptionD() {
         checkAnswer(3);
     }
 
@@ -70,4 +71,5 @@ public class QuestionPageController {
             questionLabel.setText("Wrong answer! Game over!");
         }
     }
-}
+
+
