@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="20" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.GameOverPageController">
+    <!-- Game Over Label -->
+    <Label text="Game Over"
+           alignment="CENTER"
+           style="-fx-font-size: 24px; -fx-text-fill: white; -fx-background-color: blue; -fx-padding: 15px; -fx-background-radius: 10px;" />
+
+    <!-- Restart Button -->
+    <Button fx:id="restartButton"
+            text="Restart Game"
+            alignment="CENTER"
+            textAlignment="CENTER"
+            minHeight="30.0"
+            prefHeight="30.0"
+            maxHeight="30.0"
+            minWidth="150.0"
+            prefWidth="150.0"
+            maxWidth="150.0"
+            style="-fx-font-size: 14px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 5px;" />
+
+    <!-- Exit Button -->
+    <Button fx:id="exitButton"
+            text="Exit"
+            alignment="CENTER"
+            textAlignment="CENTER"
+            minHeight="30.0"
+            prefHeight="30.0"
+            maxHeight="30.0"
+            minWidth="150.0"
+            prefWidth="150.0"
+            maxWidth="150.0"
+            style="-fx-font-size: 14px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 5px;" />
+</VBox>
