@@ -3,17 +3,71 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="200.0" minWidth="400.0" prefHeight="300.0" prefWidth="600.0" spacing="10" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.QuestionPageController">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="200.0" minWidth="400.0" prefHeight="300.0" prefWidth="600.0" spacing="10" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.QuestionPageController"
+      style="-fx-background-image: url('background.jpg'); -fx-background-size: cover; -fx-background-position: center;">
     <!-- Question Display Section -->
-    <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="100.0" prefWidth="400.0">
-        <Label fx:id="questionLabel" text="Question will be here" />
+    <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="100.0" prefWidth="400.0" style="-fx-background-color: blue;">
+        <Label fx:id="questionLabel"
+               text="Question will be here"
+               alignment="CENTER"
+               style="-fx-font-size: 14px; -fx-text-fill: white; -fx-background-color: blue; -fx-padding: 10px; -fx-background-radius: 5px;" />
     </HBox>
 
     <!-- Options Section -->
     <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="200.0" spacing="10">
-        <Button fx:id="optionA" onAction="#handleOptionA" text="Option A" />
-        <Button fx:id="optionB" onAction="#handleOptionB" text="Option B" />
-        <Button fx:id="optionC" mnemonicParsing="false" onAction="#handleOptionC" text="Option C" />
-        <Button fx:id="optionD" mnemonicParsing="false" onAction="#handleOptionD" text="Option D" textAlignment="CENTER" />
+        <Button fx:id="optionA"
+                onAction="#handleOptionA"
+                text="Option A"
+                textAlignment="CENTER"
+                alignment="CENTER"
+                minHeight="30.0"
+                prefHeight="30.0"
+                maxHeight="30.0"
+                minWidth="150.0"
+                prefWidth="150.0"
+                maxWidth="150.0"
+                style="-fx-font-size: 10px; -fx-text-fill: white; -fx-background-color: blue;" />
+
+        <Button fx:id="optionB"
+                onAction="#handleOptionB"
+                text="Option B"
+                textAlignment="CENTER"
+                alignment="CENTER"
+                minHeight="30.0"
+                prefHeight="30.0"
+                maxHeight="30.0"
+                minWidth="150.0"
+                prefWidth="150.0"
+                maxWidth="150.0"
+                style="-fx-font-size: 10px; -fx-text-fill: white; -fx-background-color: blue;" />
+
+        <Button fx:id="optionC"
+                mnemonicParsing="false"
+                onAction="#handleOptionC"
+                text="Option C"
+                textAlignment="CENTER"
+                alignment="CENTER"
+                minHeight="30.0"
+                prefHeight="30.0"
+                maxHeight="30.0"
+                minWidth="150.0"
+                prefWidth="150.0"
+                maxWidth="150.0"
+                style="-fx-font-size: 10px; -fx-text-fill: white; -fx-background-color: blue;" />
+
+        <Button fx:id="optionD"
+                mnemonicParsing="false"
+                onAction="#handleOptionD"
+                text="Option D"
+                textAlignment="CENTER"
+                alignment="CENTER"
+                minHeight="30.0"
+                prefHeight="30.0"
+                maxHeight="30.0"
+                minWidth="150.0"
+                prefWidth="150.0"
+                maxWidth="150.0"
+                style="-fx-font-size: 10px; -fx-text-fill: white; -fx-background-color: blue;" />
+
     </VBox>
 </VBox>

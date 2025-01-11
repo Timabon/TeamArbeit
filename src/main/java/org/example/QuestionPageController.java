@@ -71,5 +71,6 @@ public class QuestionPageController {
             questionLabel.setText("Wrong answer! Game over!");
         }
     }
+}
 
 
