@@ -40,4 +40,7 @@ public class Question {
     public void setCorrectAnswerIndex(int correctAnswerIndex) {
         this.correctAnswerIndex = correctAnswerIndex;
     }
+
+    public boolean isCorrectAnswer(int selectedIndex) {
+    }
 }
