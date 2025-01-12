@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="org.example.LandingPageController">
-   <Button text="Start Game" onAction="#handleStartGame"/>
-</VBox>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300" prefWidth="600" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.LandingPageController">
+   <children>
+      <Button fx:id="start" layoutX="244.0" layoutY="161.0" mnemonicParsing="false" onAction="#handleStartGame" prefHeight="43.0" prefWidth="88.0" text="Play" />
+      <Label fx:id="welcome_text" alignment="CENTER" layoutX="67.0" layoutY="57.0" prefHeight="43.0" prefWidth="404.0" text="Who wants to be a Millionaire?" AnchorPane.bottomAnchor="265.0" AnchorPane.leftAnchor="104.0" AnchorPane.rightAnchor="104.0" AnchorPane.topAnchor="57.0">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
