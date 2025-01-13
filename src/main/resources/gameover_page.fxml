@@ -3,17 +3,25 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.GameOverPageController">
-   <children>
-      <VBox alignment="CENTER" prefHeight="300" prefWidth="600" spacing="20" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-          <!-- Game Over Label -->
-          <Label fx:id="gameOverLabel" alignment="CENTER" prefHeight="64.0" prefWidth="304.0" style="-fx-font-size: 24px; -fx-text-fill: white; -fx-background-color: blue; -fx-padding: 15px; -fx-background-radius: 10px;" text="Game Over You Lost" />
-      
-          <!-- Restart Button -->
-          <Button fx:id="restartButton" alignment="CENTER" maxHeight="30.0" maxWidth="150.0" minHeight="30.0" minWidth="150.0" onAction="#handleRestart" prefHeight="30.0" prefWidth="150.0" style="-fx-font-size: 14px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 5px;" text="Restart Game" textAlignment="CENTER" />
-      
-          <!-- Exit Button -->
-          <Button fx:id="exitButton" alignment="CENTER" maxHeight="30.0" maxWidth="150.0" minHeight="30.0" minWidth="150.0" onAction="#handleExit" prefHeight="30.0" prefWidth="150.0" style="-fx-font-size: 14px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 5px;" text="Exit" textAlignment="CENTER" />
-      </VBox>
-   </children>
-</AnchorPane>
+<VBox alignment="CENTER" spacing="20" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.GameOverPageController">
+    <!-- Score Section with Blue Box -->
+    <HBox alignment="CENTER_RIGHT" spacing="10" style="-fx-padding: 10;">
+        <Label fx:id="score" style="-fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 10px; -fx-padding: 5px;" text="Score:" />
+            </HBox>
+
+    <!-- Result Section with Blue Box -->
+    <HBox alignment="CENTER" spacing="10" style="-fx-padding: 20;">
+        <Label fx:id="resultText" style="-fx-font-size: 20px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 10px; -fx-padding: 5px;" text="Result text" />
+    </HBox>
+
+    <!-- New Game Box (below Result Text) -->
+    <VBox alignment="CENTER" spacing="10">
+        <Label style="-fx-font-size: 18px; -fx-text-fill: white; -fx-background-color: blue; -fx-padding: 10px; -fx-background-radius: 10px;" text="New Game" />
+    </VBox>
+
+    <!-- Yes/No Buttons (below New Game Box) -->
+    <HBox alignment="CENTER" spacing="10">
+        <Button fx:id="yesButton" style="-fx-font-size: 14px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 5px;" text="Yes" />
+        <Button fx:id="noButton" style="-fx-font-size: 14px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 5px;" text="No" />
+    </HBox>
+</VBox>
