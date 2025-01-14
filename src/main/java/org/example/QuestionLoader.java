@@ -14,7 +14,7 @@ public class QuestionLoader {
         Gson gson = new Gson();
 
         // Try to load the file from the classpath
-        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("questions.json");
+        InputStream inputStream = getClass().getClassLoader().getResourceAsStream(file);
         if (inputStream == null) {
             System.out.println("File not found");
             return null;

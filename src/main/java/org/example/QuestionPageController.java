@@ -46,7 +46,7 @@ public class QuestionPageController {
 
     public void initialize() throws IOException {
         QuestionLoader loader = new QuestionLoader();
-        questions = loader.loadQuestions("src/main/resources/questions25TeamArbeit.csv");
+        questions = loader.loadQuestions("questions.json");
         displayQuestion();
     }
 
