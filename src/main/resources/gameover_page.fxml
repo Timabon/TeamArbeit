@@ -21,7 +21,7 @@
 
     <!-- Yes/No Buttons (below New Game Box) -->
     <HBox alignment="CENTER" spacing="10">
-        <Button fx:id="yesButton" style="-fx-font-size: 14px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 5px;" text="Yes" />
-        <Button fx:id="noButton" style="-fx-font-size: 14px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 5px;" text="No" />
+        <Button fx:id="yesButton" style="-fx-font-size: 14px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 5px;" text="Yes" onAction="#handleYesButton" />
+        <Button fx:id="noButton" style="-fx-font-size: 14px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 5px;" text="No" onAction="#handleNoButton" />
     </HBox>
 </VBox>
