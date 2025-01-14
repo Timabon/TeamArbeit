@@ -1,0 +1,202 @@
+[
+  {
+    "QuestionText": "What is the capital of France?",
+    "Option1": "Paris",
+    "Option2": "Madrid",
+    "Option3": "Berlin",
+    "Option4": "Rome",
+    "CorrectAnswerIndex": 0
+  },
+  {
+    "QuestionText": "Which planet is known as the Red Planet?",
+    "Option1": "Venus",
+    "Option2": "Mars",
+    "Option3": "Jupiter",
+    "Option4": "Saturn",
+    "CorrectAnswerIndex": 1
+  },
+  {
+    "QuestionText": "What is 5 + 3?",
+    "Option1": "6",
+    "Option2": "8",
+    "Option3": "9",
+    "Option4": "10",
+    "CorrectAnswerIndex": 1
+  },
+  {
+    "QuestionText": "Which ocean is the largest?",
+    "Option1": "Atlantic",
+    "Option2": "Indian",
+    "Option3": "Pacific",
+    "Option4": "Arctic",
+    "CorrectAnswerIndex": 2
+  },
+  {
+    "QuestionText": "Which animal is known as the King of the Jungle?",
+    "Option1": "Lion",
+    "Option2": "Tiger",
+    "Option3": "Elephant",
+    "Option4": "Cheetah",
+    "CorrectAnswerIndex": 0
+  },
+  {
+    "QuestionText": "How many continents are there?",
+    "Option1": "5",
+    "Option2": "6",
+    "Option3": "7",
+    "Option4": "8",
+    "CorrectAnswerIndex": 2
+  },
+  {
+    "QuestionText": "What color is the sky on a clear day?",
+    "Option1": "Green",
+    "Option2": "Blue",
+    "Option3": "Red",
+    "Option4": "Yellow",
+    "CorrectAnswerIndex": 1
+  },
+  {
+    "QuestionText": "Which fruit is known for having its seeds on the outside?",
+    "Option1": "Apple",
+    "Option2": "Banana",
+    "Option3": "Strawberry",
+    "Option4": "Grape",
+    "CorrectAnswerIndex": 2
+  },
+  {
+    "QuestionText": "What is H2O?",
+    "Option1": "Oxygen",
+    "Option2": "Water",
+    "Option3": "Hydrogen",
+    "Option4": "Carbon",
+    "CorrectAnswerIndex": 1
+  },
+  {
+    "QuestionText": "Which month has 28 or 29 days?",
+    "Option1": "January",
+    "Option2": "February",
+    "Option3": "March",
+    "Option4": "April",
+    "CorrectAnswerIndex": 1
+  },
+  {
+    "QuestionText": "Which shape has three sides?",
+    "Option1": "Circle",
+    "Option2": "Square",
+    "Option3": "Triangle",
+    "Option4": "Rectangle",
+    "CorrectAnswerIndex": 2
+  },
+  {
+    "QuestionText": "What do bees make?",
+    "Option1": "Honey",
+    "Option2": "Milk",
+    "Option3": "Chocolate",
+    "Option4": "Butter",
+    "CorrectAnswerIndex": 0
+  },
+  {
+    "QuestionText": "What is 10 divided by 2?",
+    "Option1": "2",
+    "Option2": "4",
+    "Option3": "5",
+    "Option4": "8",
+    "CorrectAnswerIndex": 2
+  },
+  {
+    "QuestionText": "What is the name of Mickey Mouse's pet dog?",
+    "Option1": "Pluto",
+    "Option2": "Goofy",
+    "Option3": "Donald",
+    "Option4": "Minnie",
+    "CorrectAnswerIndex": 0
+  },
+  {
+    "QuestionText": "What is the largest mammal?",
+    "Option1": "Elephant",
+    "Option2": "Whale",
+    "Option3": "Shark",
+    "Option4": "Dolphin",
+    "CorrectAnswerIndex": 1
+  },
+  {
+    "QuestionText": "Which language is primarily spoken in Spain?",
+    "Option1": "French",
+    "Option2": "Italian",
+    "Option3": "Spanish",
+    "Option4": "German",
+    "CorrectAnswerIndex": 2
+  },
+  {
+    "QuestionText": "How many legs does a spider have?",
+    "Option1": "6",
+    "Option2": "8",
+    "Option3": "10",
+    "Option4": "12",
+    "CorrectAnswerIndex": 1
+  },
+  {
+    "QuestionText": "What is the capital of Italy?",
+    "Option1": "Rome",
+    "Option2": "Venice",
+    "Option3": "Paris",
+    "Option4": "Naples",
+    "CorrectAnswerIndex": 0
+  },
+  {
+    "QuestionText": "What is the opposite of 'hot'?",
+    "Option1": "Warm",
+    "Option2": "Cool",
+    "Option3": "Cold",
+    "Option4": "Freezing",
+    "CorrectAnswerIndex": 2
+  },
+  {
+    "QuestionText": "Which country is famous for pizza?",
+    "Option1": "France",
+    "Option2": "Germany",
+    "Option3": "USA",
+    "Option4": "Italy",
+    "CorrectAnswerIndex": 3
+  },
+  {
+    "QuestionText": "What do you call a baby cat?",
+    "Option1": "Kitten",
+    "Option2": "Puppy",
+    "Option3": "Cub",
+    "Option4": "Calf",
+    "CorrectAnswerIndex": 0
+  },
+  {
+    "QuestionText": "Which season comes after winter?",
+    "Option1": "Summer",
+    "Option2": "Autumn",
+    "Option3": "Spring",
+    "Option4": "Rainy",
+    "CorrectAnswerIndex": 2
+  },
+  {
+    "QuestionText": "What is the smallest unit of matter?",
+    "Option1": "Molecule",
+    "Option2": "Atom",
+    "Option3": "Particle",
+    "Option4": "Electron",
+    "CorrectAnswerIndex": 1
+  },
+  {
+    "QuestionText": "What is 12 times 2?",
+    "Option1": "22",
+    "Option2": "24",
+    "Option3": "26",
+    "Option4": "28",
+    "CorrectAnswerIndex": 1
+  },
+  {
+    "QuestionText": "How many hours are there in a day?",
+    "Option1": "20",
+    "Option2": "22",
+    "Option3": "24",
+    "Option4": "26",
+    "CorrectAnswerIndex": 2
+  }
+]
