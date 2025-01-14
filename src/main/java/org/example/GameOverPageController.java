@@ -25,7 +25,8 @@ public class GameOverPageController {
     // Setter to update the result text
     public void setResultText(String result) {
         resultText.setText(result); // Set the result text (You Won/You Lost)
-    }/
+    }
+
 
     // Handle 'Yes' button click (Go to the question page)
     @FXML
