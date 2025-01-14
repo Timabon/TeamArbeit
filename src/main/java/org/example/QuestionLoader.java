@@ -1,35 +1,33 @@
 package org.example;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class QuestionLoader {
 
     public List<Question> loadQuestions(String file) {
-        List<Question> questionList = new ArrayList<>();
-        String delimiter = ",";
-        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
-            String line;
-            br.readLine();
-            // Read the file line by line
-            while ((line = br.readLine()) != null) {
-                String[] questions = line.split(delimiter);
+        List<Question> questionList = null;
+        Gson gson = new Gson();
 
-                if (questions.length == 6) {
-                    String questionText = questions[0];
-                    List<String> options = List.of(questions[1], questions[2], questions[3], questions[4]);
-                    int correctAnswerIndex = Integer.parseInt(questions[5]);
-                    questionList.add(new Question(questionText, options, correctAnswerIndex));
-                } else {
-                    System.out.println("Skipping malformed line: " + line);
-                }
-            }
+        // Try to load the file from the classpath
+        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("questions.json");
+        if (inputStream == null) {
+            System.out.println("File not found");
+            return null;
+        }
+
+        // Read and deserialize the JSON from the file
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream))) {
+            questionList = gson.fromJson(reader, new TypeToken<List<Question>>(){}.getType());
+        } catch (FileNotFoundException e) {
+            System.out.println("Json Datei wurde nicht gefunden");
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            System.out.println("Fehler beim Lesen der Json Datei");
+            e.printStackTrace();
         }
         return questionList;
     }
