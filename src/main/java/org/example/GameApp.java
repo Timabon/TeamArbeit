@@ -11,14 +11,31 @@ import javafx.stage.Stage;
 public class GameApp extends Application {
 
 
-
     @Override
     public void start(Stage primaryStage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/landing_page.fxml"));
-        Scene scene = new Scene(loader.load());
-        primaryStage.setTitle("Who Wants to Be a Millionaire?");
-        primaryStage.setScene(scene);
+        //splash screen
+        FXMLLoader splashLoader = new FXMLLoader(getClass().getResource("/splash_screen.fxml"));
+        Scene splashScene = new Scene(splashLoader.load());
+        primaryStage.setScene(splashScene);
+        primaryStage.setTitle("Splash Screen");
         primaryStage.show();
+
+        //Switch to landing page
+        new Thread(() -> {
+            try {
+                Thread.sleep(3000);
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/landing_page.fxml"));
+                Scene landingScene = new Scene(loader.load());
+                javafx.application.Platform.runLater(() -> {
+                    //Scene scene = new Scene(loader.load());
+                    primaryStage.setTitle("Who Wants to Be a Millionaire?");
+                    primaryStage.setScene(landingScene);
+                    // primaryStage.show();
+                });
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }).start();
     }
 
     public static void main(String[] args) {

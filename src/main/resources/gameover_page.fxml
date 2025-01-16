@@ -11,8 +11,8 @@
             </HBox>
 
     <!-- Result Section with Blue Box -->
-    <HBox alignment="CENTER" spacing="10" style="-fx-padding: 20;">
-        <Label fx:id="resultText" style="-fx-font-size: 20px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 10px; -fx-padding: 5px;" text="Result text" />
+    <HBox alignment="CENTER" spacing="10" style="-fx-padding: 30;">
+        <Label fx:id="resultText" style="-fx-font-size: 26px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 15px; -fx-padding: 5px;" text="Result text" />
     </HBox>
 
     <!-- New Game Box (below Result Text) -->
