@@ -25,76 +25,71 @@ public class QuestionPageController {
     @FXML
     private Button optionD;
 
-
-    private List<Question> questions;
-    private int currentQuestionIndex = 0;
-
-    private void loadGameOverPage(String resultText) throws IOException {
-        // Load the GameOverPage FXML
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/gameover_page.fxml"));
-        Parent root = loader.load();
-
-        // Get the controller of the GameOverPage
-        GameOverPageController gameOverController = loader.getController();
-        gameOverController.setResultText(resultText); // Pass the result text
-
-        // Switch to the GameOver page
-        Stage stage = (Stage) questionLabel.getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-    }
+    private GameLogic gameLogic; // Instance of GameLogic
 
     public void initialize() throws IOException {
+        // Load questions and initialize GameLogic
         QuestionLoader loader = new QuestionLoader();
-        questions = loader.loadQuestions("questions.json");
+        List<Question> questions = loader.loadQuestions("questions.json");
+        gameLogic = new GameLogic(questions);//inicialisation of GameLogic
+
         displayQuestion();
     }
 
     private void displayQuestion() throws IOException {
-        if (currentQuestionIndex < questions.size()) {
-            Question currentQuestion = questions.get(currentQuestionIndex);
+        Question currentQuestion = gameLogic.getNextQuestion();
+
+        if (currentQuestion != null) {
             questionLabel.setText(currentQuestion.getQuestionText());
             optionA.setText(currentQuestion.getOptions().get(0));
             optionB.setText(currentQuestion.getOptions().get(1));
             optionC.setText(currentQuestion.getOptions().get(2));
             optionD.setText(currentQuestion.getOptions().get(3));
         } else {
-            questionLabel.setText("Game Over!");
-            loadGameOverPage("You won!"); // Pass the result to GameOverPage
-
+            loadGameOverPage("You won!"); // Game over - user wins
         }
+    }
+
+    private void loadGameOverPage(String resultText) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/gameover_page.fxml"));
+        Parent root = loader.load();
+
+        GameOverPageController gameOverController = loader.getController();
+        gameOverController.setResultText(resultText);
+
+        Stage stage = (Stage) questionLabel.getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
     }
 
     @FXML
     private void handleOptionA() throws IOException {
-        checkAnswer(0);
+        handleAnswer(0);
     }
 
     @FXML
     private void handleOptionB() throws IOException {
-        checkAnswer(1);
+        handleAnswer(1);
     }
 
     @FXML
     private void handleOptionC() throws IOException {
-        checkAnswer(2);
+        handleAnswer(2);
     }
 
     @FXML
     private void handleOptionD() throws IOException {
-        checkAnswer(3);
+        handleAnswer(3);
     }
 
+    private void handleAnswer(int selectedOption) throws IOException {
+        boolean isCorrect = gameLogic.checkAnswer(selectedOption);
 
-    private void checkAnswer(int selectedOption) throws IOException {
-        Question currentQuestion = questions.get(currentQuestionIndex);
-        if (currentQuestion.isSelectedOptionCorrect(selectedOption)) {
-            currentQuestionIndex++;
+        if (isCorrect) {
+            gameLogic.updatePrizeAmount(); // Update prize on correct answer
             displayQuestion();
         } else {
-            loadGameOverPage("You lost!"); // Pass the result to GameOverPage
+            loadGameOverPage("You lost!"); // Game over - user loses
         }
     }
 }
-
-
