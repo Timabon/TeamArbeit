@@ -20,6 +20,10 @@ public class GameApp extends Application {
         primaryStage.setTitle("Splash Screen");
         primaryStage.show();
 
+        // Get the SplashScreenController and pass the primaryStage
+        SplashScreenController splashController = splashLoader.getController();
+        splashController.setPrimaryStage(primaryStage);
+
         //Switch to landing page
         new Thread(() -> {
             try {
@@ -27,8 +31,7 @@ public class GameApp extends Application {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/landing_page.fxml"));
                 Scene landingScene = new Scene(loader.load());
                 javafx.application.Platform.runLater(() -> {
-                    //Scene scene = new Scene(loader.load());
-                    primaryStage.setTitle("Who Wants to Be a Millionaire?");
+                    //primaryStage.setTitle("Who Wants to Be a Millionaire?");
                     primaryStage.setScene(landingScene);
                     // primaryStage.show();
                 });
