@@ -1,10 +1,13 @@
 package org.example;
 
+import javafx.beans.value.ChangeListener;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.geometry.Bounds;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 
@@ -20,12 +23,31 @@ public class GameOverPageController {
     public Button yesButton;
     @FXML
     public Button noButton;
+    @FXML
+    public Pane confettiPane;
+    private ChangeListener<Bounds> confettiPaneListener;
+
 
     public void initialize() {
-        // Add hover and click effects to buttons during initialization
+
+        // Add hover and click effects to buttons
         addHoverEffect(yesButton);
         addHoverEffect(noButton);
+
+        // Ensure confettiPane has a valid size
+        confettiPane.setPrefSize(800.0, 450.0); // Set the expected size of the pane
+
+//        // Debug: Check dimensions after layout
+//        confettiPane.layoutBoundsProperty().addListener((observable, oldValue, newValue) -> {
+//            System.out.println("ConfettiPane dimensions after layout: " + newValue.getWidth() + "x" + newValue.getHeight());
+//            if (newValue.getWidth() > 0 && newValue.getHeight() > 0) {
+//                System.out.println("ConfettiPane dimensions are valid!");
+//            } else {
+//                System.out.println("ConfettiPane dimensions are still invalid!");
+//            }
+//        });
     }
+
     // Setter to update the score label
     public void setScore(int prizeAmounts) {
 
@@ -41,6 +63,24 @@ public class GameOverPageController {
     public void setResultText(String result) {
         if (resultText != null) {
             resultText.setText(result); // Set the result text (You Won/You Lost)
+        }
+    }
+
+    // Confetti method
+    public void playConfetti() {
+
+        // Ensure the Pane has valid dimensions
+        if (confettiPane.getWidth() <= 0 || confettiPane.getHeight() <= 0) {
+            System.out.println("ConfettiPane dimensions are invalid. Waiting for layout...");
+            confettiPane.layoutBoundsProperty().addListener((observable, oldValue, newValue) -> {
+                if (newValue.getWidth() > 0 && newValue.getHeight() > 0) {
+                    System.out.println("ConfettiPane dimensions are now valid: " + newValue.getWidth() + "x" + newValue.getHeight());
+                    new ConfettiAnimationController().start(confettiPane);
+                    confettiPane.layoutBoundsProperty().removeListener(confettiPaneListener);
+                }
+            });
+        } else {
+            new ConfettiAnimationController().start(confettiPane); // Start immediately if dimensions are valid
         }
     }
 
@@ -62,6 +102,17 @@ public class GameOverPageController {
         }
     }
 
+
+    // Handle 'No' button click (Close the application)
+    @FXML
+    public void handleNoButton(ActionEvent actionEvent) {
+
+        // Close the application
+        Stage stage = (Stage) ((javafx.scene.Node) actionEvent.getSource()).getScene().getWindow();
+        stage.close();
+    }
+
+    //Button shadow effect
     private void addHoverEffect(Button button) {
         // Mouse entered (hover)
         button.setOnMouseEntered(event -> button.setStyle(
@@ -72,15 +123,6 @@ public class GameOverPageController {
         button.setOnMouseExited(event -> button.setStyle(
                 "-fx-font-size: 14px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 15px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 8, 0.5, 0, 2);"
         ));
-    }
-
-    // Handle 'No' button click (Close the application)
-    @FXML
-    public void handleNoButton(ActionEvent actionEvent) {
-
-        // Close the application
-        Stage stage = (Stage) ((javafx.scene.Node) actionEvent.getSource()).getScene().getWindow();
-        stage.close();
     }
 }
 
