@@ -8,7 +8,7 @@
 <?import java.awt.Image?>
 
 <StackPane xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
-           fx:controller="org.example.SplashScreenController" prefWidth="800" prefHeight="400"
+           fx:controller="org.example.SplashScreenController" prefWidth="800" prefHeight="450"
            style="-fx-background-image: url('/images/splash_screen.png'); -fx-background-size: cover; -fx-background-position: center;">
 </StackPane>
 

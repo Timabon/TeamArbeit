@@ -57,35 +57,30 @@ public void loadGameOverPage(boolean isWin) throws IOException {
 }
     private void loadGameOverPage(boolean isWin, boolean firstQuestionWrong) throws IOException {
     Stage stage = (Stage) questionLabel.getScene().getWindow(); // Get the current stage
-    int prizeAmount = isWin ? gameLogic.getPrizeAmount() : 0;
+        int prizeAmount = gameLogic.getPrizeAmount(); // Always use the accumulated prize amount
+        //int safePrize = gameLogic.getSafePrize(); // Get the safe prize amount
 
-    FXMLLoader loader = new FXMLLoader(getClass().getResource("/gameover_page.fxml"));
-    Scene gameOverScene = new Scene(loader.load());
 
-    // Get the controller
-    GameOverPageController controller = loader.getController();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/gameover_page.fxml"));
+        Scene gameOverScene = new Scene(loader.load());
 
-    // Determine result message
-    String resultMessage;
-    if (firstQuestionWrong) {
-        resultMessage = "Game Over. You Lost!";
-        controller.setScore(0);      // Set the score to 0 in the score label
-    } else if (isWin) {
-        resultMessage = "Congratulations! You Won! Your Score: $" + prizeAmount;
-        //controller.setScore(prizeAmount);
-    } else {
-        resultMessage = "Game Over! Your Score: $" + prizeAmount;
-        controller.setScore(prizeAmount);
-    }
+        // Get the controller
+        GameOverPageController controller = loader.getController();
 
         // Pass data to the controller
-    controller.setScore(prizeAmount);
-    controller.setResultText(resultMessage);
+        controller.setScore(prizeAmount);
+
+        // Determine result message
+        String resultMessage = firstQuestionWrong
+                ? "Game Over. You Lost!"
+                : isWin
+                ? "Congratulations! You Won! Your Prize: $" + prizeAmount
+                : "Game Over! Your Prize: $" + prizeAmount;
+
+        controller.setResultText(resultMessage);
 
         // Set the scene
         stage.setScene(gameOverScene);
-//    } catch (IOException e) {
-//        e.printStackTrace();
     }
 
     @FXML
@@ -111,12 +106,6 @@ public void loadGameOverPage(boolean isWin) throws IOException {
     private void handleAnswer(int selectedOption) throws IOException {
         boolean isCorrect = gameLogic.checkAnswer(selectedOption);
 
-//        if (isCorrect) {
-//            gameLogic.updatePrizeAmount(); // Update prize on correct answer
-//            displayQuestion();
-//        } else {
-//            loadGameOverPage(false); // Game over - user loses
-//        }
         if (isCorrect) {
             gameLogic.updatePrizeAmount(); // Update prize on correct answer
 

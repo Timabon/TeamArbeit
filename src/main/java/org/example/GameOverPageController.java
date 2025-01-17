@@ -26,8 +26,12 @@ public class GameOverPageController {
 
     // Setter to update the score label
     public void setScore(int prizeAmounts) {
+
         if (scoreLabel != null) {
+            // Test with a static value
             scoreLabel.setText("Your Score: $" + prizeAmounts);
+        } else {
+            System.out.println("scoreLabel is null!");
         }
     }
 
