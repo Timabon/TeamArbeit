@@ -27,11 +27,13 @@ public class QuestionPageController {
 
     private GameLogic gameLogic; // Instance of GameLogic
 
+    private boolean isFirstQuestion = true; // Flag to track if it's the first question
+
     public void initialize() throws IOException {
         // Load questions and initialize GameLogic
         QuestionLoader loader = new QuestionLoader();
         List<Question> questions = loader.loadQuestions("questions.json");
-        gameLogic = new GameLogic(questions);//inicialisation of GameLogic
+        gameLogic = new GameLogic(questions);//initialization of GameLogic
 
         displayQuestion();
     }
@@ -46,20 +48,44 @@ public class QuestionPageController {
             optionC.setText(currentQuestion.getOptions().get(2));
             optionD.setText(currentQuestion.getOptions().get(3));
         } else {
-            loadGameOverPage("You won!"); // Game over - user wins
+            loadGameOverPage(true); // Game over - user wins
         }
     }
 
-    private void loadGameOverPage(String resultText) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/gameover_page.fxml"));
-        Parent root = loader.load();
+public void loadGameOverPage(boolean isWin) throws IOException {
+    loadGameOverPage(isWin, false); // Overloaded method for backward compatibility
+}
+    private void loadGameOverPage(boolean isWin, boolean firstQuestionWrong) throws IOException {
+    Stage stage = (Stage) questionLabel.getScene().getWindow(); // Get the current stage
+    int prizeAmount = isWin ? gameLogic.getPrizeAmount() : 0;
 
-        GameOverPageController gameOverController = loader.getController();
-        gameOverController.setResultText(resultText);
+    FXMLLoader loader = new FXMLLoader(getClass().getResource("/gameover_page.fxml"));
+    Scene gameOverScene = new Scene(loader.load());
 
-        Stage stage = (Stage) questionLabel.getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
+    // Get the controller
+    GameOverPageController controller = loader.getController();
+
+    // Determine result message
+    String resultMessage;
+    if (firstQuestionWrong) {
+        resultMessage = "Game Over. You Lost!";
+        controller.setScore(0);      // Set the score to 0 in the score label
+    } else if (isWin) {
+        resultMessage = "Congratulations! You Won! Your Score: $" + prizeAmount;
+        //controller.setScore(prizeAmount);
+    } else {
+        resultMessage = "Game Over! Your Score: $" + prizeAmount;
+        controller.setScore(prizeAmount);
+    }
+
+        // Pass data to the controller
+    controller.setScore(prizeAmount);
+    controller.setResultText(resultMessage);
+
+        // Set the scene
+        stage.setScene(gameOverScene);
+//    } catch (IOException e) {
+//        e.printStackTrace();
     }
 
     @FXML
@@ -85,11 +111,28 @@ public class QuestionPageController {
     private void handleAnswer(int selectedOption) throws IOException {
         boolean isCorrect = gameLogic.checkAnswer(selectedOption);
 
+//        if (isCorrect) {
+//            gameLogic.updatePrizeAmount(); // Update prize on correct answer
+//            displayQuestion();
+//        } else {
+//            loadGameOverPage(false); // Game over - user loses
+//        }
         if (isCorrect) {
             gameLogic.updatePrizeAmount(); // Update prize on correct answer
-            displayQuestion();
+
+            // If it's the first question and correct, toggle the flag
+            if (isFirstQuestion) {
+                isFirstQuestion = false;
+            }
+
+            displayQuestion(); // Move to the next question
         } else {
-            loadGameOverPage("You lost!"); // Game over - user loses
+            // If the first question is wrong, show "You lost" with score 0
+            if (isFirstQuestion) {
+                loadGameOverPage(false, true); // Game over, wrong on the first question
+            } else {
+                loadGameOverPage(false, false); // Game over, wrong after the first question
+            }
         }
     }
 }

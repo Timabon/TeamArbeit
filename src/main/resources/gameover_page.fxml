@@ -7,12 +7,12 @@
       style="-fx-background-image: url('/images/background.jpg'); -fx-background-size: cover; -fx-background-position: center;">
     <!-- Score Section with Blue Box -->
     <HBox alignment="TOP_RIGHT" spacing="10" style="-fx-padding: 20;">
-        <Label fx:id="score" style="-fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 10px; -fx-padding: 5px;" text="Score:" />
-            </HBox>
+        <Label fx:id="scoreLabel" style="-fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 20px; -fx-padding: 10px;" />
+    </HBox>
 
     <!-- Result Section with Blue Box -->
     <HBox alignment="CENTER" spacing="10" style="-fx-padding: 30;">
-        <Label fx:id="resultText" style="-fx-font-size: 26px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 15px; -fx-padding: 5px;" text="Result text" />
+        <Label fx:id="resultText" style="-fx-font-size: 26px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 15px; -fx-padding: 30px;" text="Result text" />
     </HBox>
 
     <!-- New Game Box (below Result Text) -->

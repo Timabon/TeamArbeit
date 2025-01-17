@@ -34,10 +34,12 @@ public class GameLogic {
     }
 
     public boolean isGameOver() {
+
         return currentQuestionIndex >= questions.size();
     }
 
     public int getPrizeAmount() {
+
         return prizeAmount;
     }
 
@@ -47,4 +49,5 @@ public class GameLogic {
         if (currentQuestionIndex >= 5) return 1000;
         return 0;
     }
+
 }

@@ -10,6 +10,7 @@ import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 
 import java.io.IOException;
+import java.util.List;
 
 public class GameOverPageController {
 
@@ -22,9 +23,19 @@ public class GameOverPageController {
     @FXML
     public Button noButton;
 
+
+    // Setter to update the score label
+    public void setScore(int prizeAmounts) {
+        if (scoreLabel != null) {
+            scoreLabel.setText("Your Score: $" + prizeAmounts);
+        }
+    }
+
     // Setter to update the result text
     public void setResultText(String result) {
-        resultText.setText(result); // Set the result text (You Won/You Lost)
+        if (resultText != null) {
+            resultText.setText(result); // Set the result text (You Won/You Lost)
+        }
     }
 
 
@@ -52,3 +63,4 @@ public class GameOverPageController {
         stage.close();
     }
 }
+
