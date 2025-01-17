@@ -35,8 +35,37 @@ public class QuestionPageController {
         List<Question> questions = loader.loadQuestions("questions.json");
         gameLogic = new GameLogic(questions);//initialization of GameLogic
 
+        // Add hover and click effects to buttons
+        addHoverEffect(optionA);
+        addHoverEffect(optionB);
+        addHoverEffect(optionC);
+        addHoverEffect(optionD);
+        
         displayQuestion();
     }
+
+    private void addHoverEffect(Button button) {
+        // Mouse entered (hover)
+        button.setOnMouseEntered(event -> button.setStyle(
+                "-fx-font-size: 12px; -fx-text-fill: white; -fx-background-color: #005BB5; -fx-background-radius: 15px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 12, 0.7, 0, 4);"
+        ));
+
+        // Mouse exited
+        button.setOnMouseExited(event -> button.setStyle(
+                "-fx-font-size: 12px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 15px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 8, 0.5, 0, 2);"
+        ));
+
+        // Mouse pressed (click)
+        button.setOnMousePressed(event -> button.setStyle(
+                "-fx-font-size: 12px; -fx-text-fill: white; -fx-background-color: #003F7D; -fx-background-radius: 15px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 6, 0.3, 0, 1);"
+        ));
+
+        // Mouse released
+        button.setOnMouseReleased(event -> button.setStyle(
+                "-fx-font-size: 12px; -fx-text-fill: white; -fx-background-color: #005BB5; -fx-background-radius: 15px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 12, 0.7, 0, 4);"
+        ));
+    }
+
 
     private void displayQuestion() throws IOException {
         Question currentQuestion = gameLogic.getNextQuestion();
@@ -74,7 +103,7 @@ public void loadGameOverPage(boolean isWin) throws IOException {
         String resultMessage = firstQuestionWrong
                 ? "Game Over. You Lost!"
                 : isWin
-                ? "Congratulations! You Won! Your Prize: $" + prizeAmount
+                ? "    Congratulations!\nYou Won: $" + prizeAmount
                 : "Game Over! Your Prize: $" + prizeAmount;
 
         controller.setResultText(resultMessage);

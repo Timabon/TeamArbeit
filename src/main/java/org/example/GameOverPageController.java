@@ -5,12 +5,10 @@ import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 
 import java.io.IOException;
-import java.util.List;
 
 public class GameOverPageController {
 
@@ -23,7 +21,11 @@ public class GameOverPageController {
     @FXML
     public Button noButton;
 
-
+    public void initialize() {
+        // Add hover and click effects to buttons during initialization
+        addHoverEffect(yesButton);
+        addHoverEffect(noButton);
+    }
     // Setter to update the score label
     public void setScore(int prizeAmounts) {
 
@@ -54,14 +56,28 @@ public class GameOverPageController {
             // Get the current stage and set the new scene
             Stage stage = (Stage) ((javafx.scene.Node) actionEvent.getSource()).getScene().getWindow();
             stage.setScene(questionScene);
+
         } catch (IOException e) {
             e.printStackTrace(); // Handle the exception (you can show an error message if needed)
         }
     }
 
+    private void addHoverEffect(Button button) {
+        // Mouse entered (hover)
+        button.setOnMouseEntered(event -> button.setStyle(
+                "-fx-font-size: 14px; -fx-text-fill: white; -fx-background-color: #005BB5; -fx-background-radius: 15px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 12, 0.7, 0, 4);"
+        ));
+
+        // Mouse exited
+        button.setOnMouseExited(event -> button.setStyle(
+                "-fx-font-size: 14px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 15px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 8, 0.5, 0, 2);"
+        ));
+    }
+
     // Handle 'No' button click (Close the application)
     @FXML
     public void handleNoButton(ActionEvent actionEvent) {
+
         // Close the application
         Stage stage = (Stage) ((javafx.scene.Node) actionEvent.getSource()).getScene().getWindow();
         stage.close();
