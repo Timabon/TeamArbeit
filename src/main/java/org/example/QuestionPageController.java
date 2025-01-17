@@ -1,12 +1,11 @@
 package org.example;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -77,18 +76,25 @@ public class QuestionPageController {
             optionC.setText(currentQuestion.getOptions().get(2));
             optionD.setText(currentQuestion.getOptions().get(3));
         } else {
+            triggerConfettiAnimation(); // Show confetti animation
             loadGameOverPage(true); // Game over - user wins
         }
     }
 
-public void loadGameOverPage(boolean isWin) throws IOException {
+    private void triggerConfettiAnimation() {
+        Pane rootPane = (Pane) questionLabel.getScene().getRoot(); // Root container of the current scene
+        // Example confetti animation logic
+        ConfettiAnimationController confetti = new ConfettiAnimationController(); // Replace with your confetti implementation
+        confetti.start(rootPane); // Add confetti to the root pane
+    }
+
+    public void loadGameOverPage(boolean isWin) throws IOException {
     loadGameOverPage(isWin, false); // Overloaded method for backward compatibility
 }
     private void loadGameOverPage(boolean isWin, boolean firstQuestionWrong) throws IOException {
     Stage stage = (Stage) questionLabel.getScene().getWindow(); // Get the current stage
         int prizeAmount = gameLogic.getPrizeAmount(); // Always use the accumulated prize amount
         //int safePrize = gameLogic.getSafePrize(); // Get the safe prize amount
-
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/gameover_page.fxml"));
         Scene gameOverScene = new Scene(loader.load());
@@ -107,6 +113,9 @@ public void loadGameOverPage(boolean isWin) throws IOException {
                 : "Game Over! Your Prize: $" + prizeAmount;
 
         controller.setResultText(resultMessage);
+        if (isWin) {
+            controller.playConfetti(); // Play confetti if the player wins
+        }
 
         // Set the scene
         stage.setScene(gameOverScene);
