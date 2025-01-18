@@ -1,0 +1,62 @@
+[
+  {
+    "questionText": "What is the main goal of a programmer on a Friday evening?",
+    "options": ["Fixing bugs", "Adding new features", "Not creating new bugs ", " Leaving the office on time"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "questionText": "What is the perfect time to start a new project?",
+    "options": ["Monday morning", "Friday at 4:55 PM", "After the first coffee", " After the third coffee"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "questionText": "Why do programmers press Ctrl + S so often?",
+    "options": ["Because they love the sound", "FThey're scared of crashes", " To impress their colleagues", " Out of reflex"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "questionText": "Which animal would make the best programmer?",
+    "options": ["A sloth (because it’s efficiently lazy)", "An octopus (lots of arms, lots of code)", " An owl (only works at night)", " A cat (does whatever it wants)"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "questionText": "What does a programmer say when their code works on the first try?",
+    "options": ["This can’t be right", "I’m a genius!", "Did I really write this?", "I need coffee"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "questionText": "What does a programmer do when their code doesn’t work?",
+    "options": ["Google the error", "Go for a walk", "Restart the PC", " Blame the compiler"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "questionText": "What do you call a code that works but no one understands?",
+    "options": ["Art", "Legacy code", "Hacker magic", " Luck"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "questionText": "What is the best way to fix a bug?",
+    "options": ["Yell at your computer", "Turn it off and on again", " Add more bugs to distract it", " Debugging tools"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "questionText": "What does LOL mean in programming?",
+    "options": ["Laugh Out Loud", "Loop Over List", " Lots Of Logic", " Lost On Linux"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "questionText": "What is the most important skill for a programmer?",
+    "options": ["Coding", "Googling", "Typing really fast", "Drinking coffee"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "questionText": "Which tool is essential for version control?",
+    "options": ["Git", "Glue", "Wrench", "Hammer"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "questionText": "What does a 404 Error mean?",
+    "options": ["You’ve been hacked", "Page not found", "Your computer exploded", "Too many tabs open"],
+    "correctAnswerIndex": 1
+  }
+]

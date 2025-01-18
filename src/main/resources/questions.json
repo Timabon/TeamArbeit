@@ -123,31 +123,5 @@
     "questionText": "How many hours are there in a day?",
     "options": ["20", "22", "24", "26"],
     "correctAnswerIndex": 2
-  },
-  {
-    "questionText": "What is the main goal of a programmer on a Friday evening?",
-    "options": ["Fixing bugs", "Adding new features", "Not creating new bugs", "Leaving the office on time"],
-    "correctAnswerIndex": 2
-  },
-  {
-    "questionText": "What is the perfect time to start a new project?",
-    "options": [" Monday morning", "Friday at 4:55 PM", "After the first coffee", "After the third coffee"],
-    "correctAnswerIndex": 3
-  },
-  {
-    "questionText": "Which animal would make the best programmer?",
-    "options": ["A sloth (because it’s efficiently lazy)", "An octopus (lots of arms, lots of code)",
-      "An owl (only works at night)", "A cat (does whatever it wants)"],
-    "correctAnswerIndex": 1
-  },
-  {
-    "questionText": "What does a programmer say when their code works on the first try?",
-    "options": [" This can’t be right...", "I’m a genius!", "Did I really write this?", "I need coffee"],
-    "correctAnswerIndex": 0
-  },
-  {
-    "questionText": "What do you call a code that works but no one understands?",
-    "options": ["Art", "Legacy code", "DHacker magic", "Luck"],
-    "correctAnswerIndex": 1
   }
 ]
