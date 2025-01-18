@@ -131,7 +131,7 @@
   },
   {
     "questionText": "What is the perfect time to start a new project?",
-    "options": ["Monday morning", "Friday at 4:55 PM", "After the first coffee", "After the third coffee"],
+    "options": [" Monday morning", "Friday at 4:55 PM", "After the first coffee", "After the third coffee"],
     "correctAnswerIndex": 3
   },
   {
@@ -141,18 +141,13 @@
     "correctAnswerIndex": 1
   },
   {
-    "questionText": "What do you call a code that works but no one understands?",
-    "options": ["Art", "Legacy code", "Hacker magic", "Luck"],
-    "correctAnswerIndex": 1
-  },
-  {
-    "questionText": "What is every programmer’s secret dream?",
-    "options": ["A bug-free software", "100% test coverage", "A boss who understands code", "Code that writes itself"],
-    "correctAnswerIndex": 3
-  },
-  {
-    "questionText": "What is the golden rule of programming?",
-    "options": [" If it works, don’t touch it", "Always comment your code", " Never work on Fridays", "Restart the PC before asking for help"],
+    "questionText": "What does a programmer say when their code works on the first try?",
+    "options": [" This can’t be right...", "I’m a genius!", "Did I really write this?", "I need coffee"],
     "correctAnswerIndex": 0
+  },
+  {
+    "questionText": "What do you call a code that works but no one understands?",
+    "options": ["Art", "Legacy code", "DHacker magic", "Luck"],
+    "correctAnswerIndex": 1
   }
 ]
