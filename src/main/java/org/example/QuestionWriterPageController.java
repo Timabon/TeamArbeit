@@ -1,14 +1,15 @@
+package org.example;
+
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
-import org.example.Question;
 
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -44,7 +45,6 @@ public class QuestionWriterPageController {
     @FXML
     private RadioButton option4RadioButton;
 
-    @FXML
     private ToggleGroup correctAnswerToggleGroup; // ToggleGroup for radio buttons
 
     private Stage currentStage;
@@ -54,17 +54,15 @@ public class QuestionWriterPageController {
         this.currentStage = stage;
     }
 
-
     @FXML
     public void initialize() {
-        // Create a ToggleGroup and associate it with the RadioButtons
-        ToggleGroup group = new ToggleGroup();
-        option1RadioButton.setToggleGroup(group);
-        option2RadioButton.setToggleGroup(group);
-        option3RadioButton.setToggleGroup(group);
-        option4RadioButton.setToggleGroup(group);
+        // Initialize the ToggleGroup and associate it with the RadioButtons
+        correctAnswerToggleGroup = new ToggleGroup();  // Initialize the ToggleGroup
+        option1RadioButton.setToggleGroup(correctAnswerToggleGroup);
+        option2RadioButton.setToggleGroup(correctAnswerToggleGroup);
+        option3RadioButton.setToggleGroup(correctAnswerToggleGroup);
+        option4RadioButton.setToggleGroup(correctAnswerToggleGroup);
     }
-
 
     public void saveQuestion(ActionEvent actionEvent) {
         String questionText = questionTextField.getText();
@@ -111,13 +109,32 @@ public class QuestionWriterPageController {
 
 
         // Using try-catch to handle saving and error messaging
-        try (FileWriter writer = new FileWriter(filePath)) {
+        try {
+            // Read the existing questions from the file (if any)
             Gson gson = new Gson();
-            gson.toJson(newQuestion, writer);  // Save the new question directly to the file
+            List<Question> questionList = new ArrayList<>();
+
+            // If the file already exists, load existing questions
+            File file = new File(filePath);
+            if (file.exists() && file.length() > 0) {
+                BufferedReader reader = new BufferedReader(new FileReader(filePath));
+                questionList = gson.fromJson(reader, new TypeToken<List<Question>>() {}.getType());
+                reader.close();
+            }
+
+            // Add the new question to the list
+            questionList.add(newQuestion);
+
+            // Write the updated list back to the file
+            FileWriter writer = new FileWriter(filePath);
+            gson.toJson(questionList, writer);
+            writer.close();
+
             System.out.println("Question saved successfully!");
             clearFields();
             returnToLandingPage(actionEvent);
-        } catch (Exception e) {
+
+        } catch (IOException e) {
             // Handle exceptions if saving the question fails
             e.printStackTrace();
             System.out.println("Failed to save question!");
@@ -140,15 +157,16 @@ public class QuestionWriterPageController {
         correctAnswerToggleGroup.selectToggle(null); // Clear selection of the ToggleGroup
     }
 
+    @FXML
     public void returnToLandingPage(ActionEvent actionEvent){
         try {
-            // Load the Question Page
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/question_page.fxml"));
-            Scene questionScene = new Scene(loader.load());
+            // Load the Landing Page
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/landing_page.fxml"));
+            Scene landingScene = new Scene(loader.load());
 
             // Get the current stage and set the new scene
             Stage stage = (Stage) ((javafx.scene.Node) actionEvent.getSource()).getScene().getWindow();
-            stage.setScene(questionScene);
+            stage.setScene(landingScene);
 
         } catch (IOException e) {
             e.printStackTrace(); // Handle the exception

@@ -4,7 +4,7 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="QuestionWriterPageController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.QuestionWriterPageController">
     <children>
         <!-- Background image -->
         <ImageView fitHeight="400.0" fitWidth="600.0" preserveRatio="false">
@@ -49,8 +49,8 @@
             
                         <!-- Radio Button Group for Answer Options -->
                         <RadioButton fx:id="option1RadioButton" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                        <RadioButton fx:id="option2RadioButton" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
-                        <RadioButton fx:id="option3RadioButton" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="option2RadioButton"  GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                        <RadioButton fx:id="option3RadioButton"  GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
                         <RadioButton fx:id="option4RadioButton" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
                      <columnConstraints>
                         <ColumnConstraints maxWidth="367.3333333333333" minWidth="148.66666666666666" prefWidth="236.66666666666666" />
