@@ -90,7 +90,7 @@ public class GameOverPageController {
     public void handleYesButton(ActionEvent actionEvent) {
         try {
             // Load the Question Page
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/question_page.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/landing_page.fxml"));
             Scene questionScene = new Scene(loader.load());
 
             // Get the current stage and set the new scene

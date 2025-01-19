@@ -1,0 +1,127 @@
+[
+  {
+    "questionText": "How do you declare an array of integers?",
+    "options": ["int[] arr;", "array int arr;", "int arr[];", "Both a and c"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "questionText": "What does \"public\" mean in Java?",
+    "options": ["Bathroom", "Constructor", "Access modifier", "Function"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "questionText": "What is a statement?",
+    "options": ["6", "8", "Your T-shirt", "10"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "questionText": "What does HTML stand for?",
+    "options": ["Home Tool Markup Language", "Hyperlinks and Text Markup Language", "Hyper Text Markup Language", "Hyper Tool Markup Language"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "questionText": "Which keyword is used to define a class in Java?",
+    "options": ["define", "class", "object", "static"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "questionText": "What is Json used for?",
+    "options": ["Struction", "Vacuuming", "Data storage and transformation", "Animation"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "questionText": "What color is the sky on a clear day?",
+    "options": ["Green", "Blue", "Red", "Yellow"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "questionText": "How many times will this be executed?\n for (int i = 0; i < 5; i++)?",
+    "options": ["0", "6", "Infinite", "5"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "questionText": "What is a thread?",
+    "options": ["Oxygen", "Water", "Hydrogen", "Carbon"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "questionText": "What is the role of FXML in JavaFX?",
+    "options": ["To define the layout and design of the UI in XML format", "To handle backend logic for the application", "To manage event listeners", "To load images into the application"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "questionText": "Which is the correct syntax to output\"Hello World\" in Java?",
+    "options": ["echo(\"Hello World\");", "Console.WriteLine(\"Hello World\");", "System.out.println(\"Hello World\");", "print(\"Hello World\")"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "questionText": "What do bees make?",
+    "options": ["Honey", "Milk", "Chocolate", "Butter"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "questionText": "What is 10 divided by 2?",
+    "options": ["2", "4", "5", "8"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "questionText": "How do you create a variable with the numeric value 5??",
+    "options": ["num x = 5;", "x = 5;", "int x = 5;", "float x = 5;"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "questionText": "What is the largest mammal?",
+    "options": ["Elephant", "Whale", "Shark", "Dolphin"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "questionText": "Which statement is used to stop a loop??",
+    "options": ["break", "return", "abort", "exit"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "questionText": "How many legs does a spider have?",
+    "options": ["6", "8", "10", "12"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "questionText": "Which operator can be used to compare two values?",
+    "options": ["><", "=", "<>", "=="],
+    "correctAnswerIndex": 3
+  },
+  {
+    "questionText": "What is the opposite of 'hot'?",
+    "options": ["Warm", "Cool", "Cold", "Freezing"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "questionText": "Which country is famous for pizza?",
+    "options": ["France", "Germany", "USA", "Italy"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "questionText": "What do you call a baby cat?",
+    "options": ["Kitten", "Puppy", "Cub", "Calf"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "questionText": "Which season comes after winter?",
+    "options": ["Summer", "Autumn", "Spring", "Rainy"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "questionText": "What is the smallest unit of matter?",
+    "options": ["Molecule", "Atom", "Particle", "Electron"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "questionText": "What is 12 times 2?",
+    "options": ["22", "24", "26", "28"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "questionText": "How many hours are there in a day?",
+    "options": ["20", "22", "24", "26"],
+    "correctAnswerIndex": 2
+  }
+]

@@ -11,7 +11,7 @@
   },
   {
     "questionText": "Why do programmers press Ctrl + S so often?",
-    "options": ["Because they love the sound", "FThey're scared of crashes", " To impress their colleagues", " Out of reflex"],
+    "options": ["Because they love the sound", "They're scared of crashes", " To impress their colleagues", " Out of reflex"],
     "correctAnswerIndex": 1
   },
   {
@@ -25,8 +25,8 @@
     "correctAnswerIndex": 0
   },
   {
-    "questionText": "What does a programmer do when their code doesn’t work?",
-    "options": ["Google the error", "Go for a walk", "Restart the PC", " Blame the compiler"],
+    "questionText": "Why don't developers like nature?",
+    "options": ["Too many bugs", "No documentation for trees", "Debugging is harder outside", "The sun creates glare on their screen"],
     "correctAnswerIndex": 0
   },
   {
@@ -50,8 +50,8 @@
     "correctAnswerIndex": 1
   },
   {
-    "questionText": "Which tool is essential for version control?",
-    "options": ["Git", "Glue", "Wrench", "Hammer"],
+    "questionText": "Why did the server go to therapy?",
+    "options": ["It couldn't handle the load", "It was clouded by emotions", "It had too many connections", "It couldn't find its root cause"],
     "correctAnswerIndex": 0
   },
   {

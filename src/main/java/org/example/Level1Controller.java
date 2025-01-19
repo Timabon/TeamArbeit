@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.List;
 
-public class QuestionPageController {
+public class Level1Controller {
 
     @FXML
     private Label questionLabel;
@@ -31,7 +31,7 @@ public class QuestionPageController {
     public void initialize() throws IOException {
         // Load questions and initialize GameLogic
         QuestionLoader loader = new QuestionLoader();
-        List<Question> questions = loader.loadQuestions("questions.json");
+        List<Question> questions = loader.loadQuestions("level1.json");
         gameLogic = new GameLogic(questions);//initialization of GameLogic
 
         // Add hover and click effects to buttons
