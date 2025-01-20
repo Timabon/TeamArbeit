@@ -11,8 +11,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.List;
 
-public class LevelCostumeController {
-
+public class LevelCustomController {
 
         @FXML
         private Label questionLabel;
@@ -41,7 +40,7 @@ public class LevelCostumeController {
 
             // Load questions and initialize GameLogic
             QuestionLoader loader = new QuestionLoader();
-            List<Question> questions = loader.loadQuestions("level_costume.json");
+            List<Question> questions = loader.loadQuestions("level_custom.json");
             gameLogic = new GameLogic(questions);//initialization of GameLogic
 
             // Add hover and click effects to buttons

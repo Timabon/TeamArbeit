@@ -3,19 +3,19 @@ package org.example;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
-import javafx.scene.text.Text;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 public class GameApp extends Application {
-
 
     @Override
     public void start(Stage primaryStage) throws Exception {
         //splash screen
         FXMLLoader splashLoader = new FXMLLoader(getClass().getResource("/splash_screen.fxml"));
         Scene splashScene = new Scene(splashLoader.load());
+        // Set the scene background to black
+        splashScene.setFill(Color.BLACK);
+
         primaryStage.setScene(splashScene);
         primaryStage.setTitle("Guesstimate");
         primaryStage.setResizable(false); // Disable resizing

@@ -34,9 +34,7 @@ public class CustomQuestionListController {
 
     private ObservableList<Question> questions = FXCollections.observableArrayList(); // ObservableList for dynamic updates
 
-
-    private static final String FILE_PATH = "src/main/resources/level_costume.json";
-
+    private static final String FILE_PATH = "src/main/resources/level_custom.json";
 
     @FXML
     public void initialize() {

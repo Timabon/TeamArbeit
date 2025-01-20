@@ -6,7 +6,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<StackPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.LevelCostumeController" prefHeight="450.0" prefWidth="800.0" style="-fx-background-image: url('/images/background.jpg'); -fx-background-size: cover; -fx-background-position: center;">
+<StackPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.LevelCustomController" prefHeight="450.0" prefWidth="800.0" style="-fx-background-image: url('/images/background.jpg'); -fx-background-size: cover; -fx-background-position: center;">
 
 <!-- Score Display Section -->
 <Label fx:id="scoreLabel" StackPane.alignment="TOP_RIGHT" translateX="-10" translateY="10" text="Score: $0"  style="-fx-font-size: 14px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 20px; -fx-padding: 10px; -fx-min-width: 120px; -fx-min-height: 30px;"/>

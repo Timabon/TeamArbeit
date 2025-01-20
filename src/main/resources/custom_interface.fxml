@@ -10,13 +10,13 @@
 
       <Label fx:id="customLabel" alignment="CENTER" layoutX="190.0" layoutY="70.0" prefHeight="120.0" prefWidth="420.0" style="-fx-background-color: blue; -fx-background-radius: 10px;" />
 
-      <!-- Costume Mode Label (Text) -->
+      <!-- Custom Mode Label (Text) -->
       <VBox alignment="CENTER" prefHeight="260.0" prefWidth="800.0" spacing="5" style="-fx-background-color: transparent;">
          <Text style="-fx-font-size: 24px; -fx-fill: white;" text="Custom Mode?"/>
          <Text style="-fx-font-size: 24px; -fx-fill: white;" text="Create your own quiz!"/>
       </VBox>
 
-      <!-- Costume Mode Buttons: Play, New Question, Delete Question -->
+      <!-- Custom Mode Buttons: Play, New Question, Delete Question -->
       <Button fx:id="customPlayButton" layoutX="325.0" layoutY="240.0" mnemonicParsing="false" onAction="#handleCustomPlay" prefHeight="35.0" prefWidth="150.0" style="-fx-font-size: 16px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 15px;" text="Play" />
       <Button fx:id="customNewQuestionButton" layoutX="325.0" layoutY="290.0" mnemonicParsing="false" onAction="#handleCustomNewQuestion" prefHeight="35.0" prefWidth="150.0" style="-fx-font-size: 16px;-fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 15px;" text="New Question" />
       <Button fx:id="customDeleteButton" layoutX="325.0" layoutY="340.0" mnemonicParsing="false" onAction="#handleCustomDelete" prefHeight="35.0" prefWidth="150.0" style="-fx-font-size: 16px;-fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 15px;" text="Delete Question" />

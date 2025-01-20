@@ -149,7 +149,7 @@ public class QuestionWriterPageController {
 
             // If the file already exists, load existing questions
             //path to "database" file
-            String filePath = "src/main/resources/level_costume.json";
+            String filePath = "src/main/resources/level_custom.json";
             File file = new File(filePath);
             if (file.exists() && file.length() > 0) {
                 BufferedReader reader = new BufferedReader(new FileReader(filePath));

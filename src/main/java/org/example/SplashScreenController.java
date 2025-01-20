@@ -29,14 +29,12 @@ public class SplashScreenController {
         // Force layout pass
         splashRoot.applyCss();
         splashRoot.layout();
-        System.out.println("After layout pass: BlackBackground size: " + blackBackground.getWidth() + "x" + blackBackground.getHeight());
-// Add listener for layout changes
+//        System.out.println("After layout pass: BlackBackground size: " + blackBackground.getWidth() + "x" + blackBackground.getHeight());
+        // Add listener for layout changes
         blackBackground.layoutBoundsProperty().addListener((observable, oldValue, newValue) -> {
-            System.out.println("Updated BlackBackground size: " + newValue.getWidth() + "x" + newValue.getHeight());
+            //System.out.println("Updated BlackBackground size: " + newValue.getWidth() + "x" + newValue.getHeight());
         });
-        System.out.println("BlackBackground size: " + blackBackground.getWidth() + "x" + blackBackground.getHeight());
 
-        // Add the shake effect at the start
         playShakeEffect();
     }
     // Set the primary stage after loading the FXML
@@ -90,16 +88,15 @@ public class SplashScreenController {
                 // Move right
                 new KeyFrame(Duration.millis(200), new KeyValue(splashRoot.translateXProperty(), 5)),
                 // Back to center
-                new KeyFrame(Duration.millis(300), new KeyValue(splashRoot.translateXProperty(), -5))
-                // Right again
-                //new KeyFrame(Duration.millis(200), new KeyValue(splashRoot.translateXProperty(), 5)),
-                // Settle at the original position
-               // new KeyFrame(Duration.millis(250), new KeyValue(splashRoot.translateXProperty(), 0))
+                new KeyFrame(Duration.millis(300), new KeyValue(splashRoot.translateXProperty(), -5)),
+                 //Right again
+                new KeyFrame(Duration.millis(200), new KeyValue(splashRoot.translateXProperty(), 5)),
+                 //Settle at the original position
+                new KeyFrame(Duration.millis(250), new KeyValue(splashRoot.translateXProperty(), 0))
         );
 
         // Play the animation
         shakeTimeline.setCycleCount(3); // Repeat the shake twice for extra effect
-        //shakeTimeline.setAutoReverse(false); // Do not auto-reverse
         shakeTimeline.setOnFinished(event -> setupFadeTransition());
         shakeTimeline.play();
 

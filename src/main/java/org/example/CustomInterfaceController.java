@@ -59,7 +59,7 @@ public class CustomInterfaceController {
     }
 
     private boolean isFileEmpty() {
-        try (FileReader reader = new FileReader("src/main/resources/level_costume.json")) {
+        try (FileReader reader = new FileReader("src/main/resources/level_custom.json")) {
             Gson gson = new Gson();
             Question[] questions = gson.fromJson(reader, Question[].class);
 
@@ -95,7 +95,7 @@ public class CustomInterfaceController {
 
     public void handleCustomNewQuestion(ActionEvent actionEvent) {
         try {
-            // Load the Costume_New_Question_Page for adding new question(s)
+            // Load the Custom_New_Question_Page for adding new question(s)
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/custom_new_question_page.fxml"));
             Scene landingScene = new Scene(loader.load());
 
@@ -108,10 +108,9 @@ public class CustomInterfaceController {
         }
     }
 
-
     public void handleCustomDelete(ActionEvent actionEvent) {
         try {
-            // Load the Costume_Question_List for deleting questions(s)
+            // Load the Custom_Question_List for deleting questions(s)
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/custom_question_list.fxml"));
             Scene landingScene = new Scene(loader.load());
 
@@ -124,10 +123,9 @@ public class CustomInterfaceController {
         }
     }
 
-
     public void handleCustomExit(ActionEvent actionEvent) {
         try {
-            // Load the Landing Page to leave costume mode
+            // Load the Landing Page to leave custom mode
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/landing_page.fxml"));
             Scene landingScene = new Scene(loader.load());
 
