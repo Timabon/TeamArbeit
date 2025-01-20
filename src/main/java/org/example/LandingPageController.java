@@ -17,17 +17,21 @@ public class LandingPageController {
     public Button level2;
     @FXML
     public Button level3;
+    @FXML
+    public Button custom;
 
     public void initialize() {
         // Apply hover effects to buttons
         addHoverEffect(level1);
         addHoverEffect(level2);
         addHoverEffect(level3);
+        addHoverEffect(custom);
 
         // Set the default style for the buttons
         level1.setStyle("-fx-font-size: 12px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 15px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 8, 0.5, 0, 2);");
         level2.setStyle("-fx-font-size: 12px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 15px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 8, 0.5, 0, 2);");
         level3.setStyle("-fx-font-size: 12px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 15px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 8, 0.5, 0, 2);");
+        custom.setStyle("-fx-font-size: 12px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 15px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 8, 0.5, 0, 2);");
 
     }
         private void addHoverEffect (Button button){
@@ -87,6 +91,22 @@ public class LandingPageController {
         try {
             // Load the Question Page
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/level3.fxml"));
+            Scene questionWriterScene = new Scene(loader.load());
+
+            // Get the current stage and set the new scene
+            Stage stage = (Stage) ((javafx.scene.Node) actionEvent.getSource()).getScene().getWindow();
+            stage.setScene(questionWriterScene);
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    @FXML
+    public void handleCustom(ActionEvent actionEvent) {
+        custom.setDisable(true); // Disable the button
+        try {
+            // Load the Question Page
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/question_writer_page.fxml"));
             Scene questionWriterScene = new Scene(loader.load());
 
             // Get the current stage and set the new scene
