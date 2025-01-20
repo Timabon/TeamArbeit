@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.QuestionWriterPageController">
+    <children>
+
+        <!-- Background image -->
+        <ImageView fitHeight="400.0" fitWidth="600.0" preserveRatio="false">
+            <image>
+                <Image url="@/images/background.jpg" /> <!-- Specify the path to your background image -->
+            </image>
+        </ImageView>
+
+        <!-- VBox for positioning buttons vertically and stretching horizontally -->
+        <VBox alignment="CENTER" layoutX="0.0" layoutY="360.0" prefWidth="600.0" spacing="20.0">
+            <HBox alignment="CENTER" prefWidth="600.0" spacing="20.0">
+                <Button onAction="#saveQuestion" style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 5;" text="Save" />
+                <Button onAction="#exitApplication" style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 5;" text="Exit" />
+            </HBox>
+        </VBox>
+
+        <VBox alignment="CENTER" prefHeight="320.0" prefWidth="600.0">
+            <children>
+
+                <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="320.0" prefWidth="300.0">
+                    <children>
+
+                        <!-- GridPane for layout (2 columns, 7 rows) -->
+                        <GridPane alignment="CENTER" hgap="10.0" prefWidth="560.0" vgap="10.0">
+                            <!-- Heading for New Question -->
+                            <Label alignment="CENTER" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: white; -fx-background-radius: 10; -fx-padding: 10;" text="New Question:" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0" />
+
+                            <!-- TextArea for Question -->
+                            <TextArea fx:id="questionTextField" prefHeight="80.0" promptText="Enter question text" text="&#10;&#10;&#10;" wrapText="true" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+
+                            <!-- Label for Possible Answers -->
+                            <Label style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 5;" text="Possible Answers" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+
+                            <!-- Label for Correct Answer -->
+                            <Label style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 5;" text="Correct" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                            <!-- Text fields for the answer options -->
+                            <TextField fx:id="option1TextField" promptText="Option 1" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                            <TextField fx:id="option2TextField" promptText="Option 2" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                            <TextField fx:id="option3TextField" promptText="Option 3" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                            <TextField fx:id="option4TextField" promptText="Option 4" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+
+                            <!-- Radio Button Group for Answer Options -->
+                            <RadioButton fx:id="option1RadioButton" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                            <RadioButton fx:id="option2RadioButton"  GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                            <RadioButton fx:id="option3RadioButton"  GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                            <RadioButton fx:id="option4RadioButton" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+                            <columnConstraints>
+                                <ColumnConstraints maxWidth="367.3333333333333" minWidth="148.66666666666666" prefWidth="236.66666666666666" />
+                                <ColumnConstraints maxWidth="315.0" minWidth="25.33333333333337" prefWidth="53.33333333333334" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints />
+                                <RowConstraints />
+                                <RowConstraints />
+                                <RowConstraints />
+                                <RowConstraints />
+                                <RowConstraints />
+                                <RowConstraints />
+                            </rowConstraints>
+                        </GridPane>
+                    </children>
+                </VBox>
+            </children></VBox>
+
+    </children>
+</AnchorPane>

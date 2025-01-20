@@ -44,8 +44,6 @@ public class GameOverPageController {
         if (scoreLabel != null) {
             // Test with a static value
             scoreLabel.setText("Your Score: $" + prizeAmounts);
-        } else {
-            System.out.println("scoreLabel is null!");
         }
     }
 

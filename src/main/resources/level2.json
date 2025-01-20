@@ -80,8 +80,8 @@
     "correctAnswerIndex": 0
   },
   {
-    "questionText": "What does a programmer say when their code works on the first try?",
-    "options": ["This can’t be right", "I’m a genius!", "Did I really write this?", "I need coffee"],
+    "questionText": "What do you call a loop that never ends?",
+    "options": ["Job security", "A feature", "A nightmare", "A while(true) loop"],
     "correctAnswerIndex": 0
   },
   {
@@ -95,13 +95,13 @@
     "correctAnswerIndex": 1
   },
   {
-    "questionText": "What is the best way to fix a bug?",
-    "options": ["Yell at your computer", "Turn it off and on again", " Add more bugs to distract it", " Debugging tools"],
+    "questionText": "What’s a programmer’s worst fear?",
+    "options": ["Missing semicolon", "A critical deadline", "Code reviews", "\"It works on my machine\""],
     "correctAnswerIndex": 3
   },
   {
-    "questionText": "What does LOL mean in programming?",
-    "options": ["Laugh Out Loud", "Loop Over List", " Lots Of Logic", " Lost On Linux"],
+    "questionText": "What’s a programmer’s favorite type of music?",
+    "options": ["Classical", "Jazz", "Algo-rhythm", "lo-fi beats"],
     "correctAnswerIndex": 1
   },
   {
@@ -110,9 +110,9 @@
     "correctAnswerIndex": 1
   },
   {
-    "questionText": "Why did the server go to therapy?",
-    "options": ["It couldn't handle the load", "It was clouded by emotions", "It had too many connections", "It couldn't find its root cause"],
-    "correctAnswerIndex": 0
+    "questionText": "What do you call a programmer who can’t debug?",
+    "options": ["A developer", "A feature creator", "A manager", "A poet"],
+    "correctAnswerIndex": 2
   },
   {
     "questionText": "What does a 404 Error mean?",

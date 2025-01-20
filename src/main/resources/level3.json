@@ -10,13 +10,13 @@
     "correctAnswerIndex": 2
   },
   {
-    "questionText": "What is a statement?",
-    "options": ["6", "8", "Your T-shirt", "10"],
+    "questionText": "What is the default value of a local variable in Java?",
+      "options": ["Undefined", "0", "false", "null"],
     "correctAnswerIndex": 1
   },
   {
     "questionText": "What does HTML stand for?",
-    "options": ["Home Tool Markup Language", "Hyperlinks and Text Markup Language", "Hyper Text Markup Language", "Hyper Tool Markup Language"],
+    "options": ["Home Tool Markup Language", "Hyperlinks Text Markup Language", "Hyper Text Markup Language", "Hyper Tool Markup Language"],
     "correctAnswerIndex": 2
   },
   {
@@ -26,12 +26,12 @@
   },
   {
     "questionText": "What is Json used for?",
-    "options": ["Struction", "Vacuuming", "Data storage and transformation", "Animation"],
+    "options": ["Structure", "Vacuuming", "Data storage and transformation", "Animation"],
     "correctAnswerIndex": 2
   },
   {
-    "questionText": "What color is the sky on a clear day?",
-    "options": ["Green", "Blue", "Red", "Yellow"],
+    "questionText": "Which of the following is not a primitive type in Java?",
+    "options": ["int", "String", "double", "char"],
     "correctAnswerIndex": 1
   },
   {
@@ -40,13 +40,13 @@
     "correctAnswerIndex": 3
   },
   {
-    "questionText": "What is a thread?",
-    "options": ["Oxygen", "Water", "Hydrogen", "Carbon"],
-    "correctAnswerIndex": 1
+    "questionText": "What is the primary purpose of threads in a program?",
+    "options": ["To make the program compile faster", "To reduce memory usage", "To execute multiple tasks at once", "To improve exception handling"],
+    "correctAnswerIndex": 2
   },
   {
     "questionText": "What is the role of FXML in JavaFX?",
-    "options": ["To define the layout and design of the UI in XML format", "To handle backend logic for the application", "To manage event listeners", "To load images into the application"],
+    "options": ["To define the UI layout and design", "To handle backend logic", "To manage event listeners", "To load images into the application"],
     "correctAnswerIndex": 0
   },
   {
@@ -55,13 +55,13 @@
     "correctAnswerIndex": 2
   },
   {
-    "questionText": "What do bees make?",
-    "options": ["Honey", "Milk", "Chocolate", "Butter"],
-    "correctAnswerIndex": 0
+    "questionText": "Which Java feature allows a method to have multiple implementations in different classes?",
+    "options": ["Encapsulation", "Inheritance", "Abstraction", "Polymorphism"],
+    "correctAnswerIndex": 3
   },
   {
-    "questionText": "What is 10 divided by 2?",
-    "options": ["2", "4", "5", "8"],
+    "questionText": "Which of these is not a valid access modifier in Java?",
+    "options": ["public", "protected", "global", "private"],
     "correctAnswerIndex": 2
   },
   {
@@ -70,19 +70,19 @@
     "correctAnswerIndex": 0
   },
   {
-    "questionText": "What is the largest mammal?",
-    "options": ["Elephant", "Whale", "Shark", "Dolphin"],
+    "questionText": "What is the output of System.out.println(10 + \"20\");?",
+    "options": ["30", "1020", "Compilation error", "Runtime error"],
     "correctAnswerIndex": 1
   },
   {
     "questionText": "Which statement is used to stop a loop??",
     "options": ["break", "return", "abort", "exit"],
-    "correctAnswerIndex": 2
+    "correctAnswerIndex": 0
   },
   {
-    "questionText": "How many legs does a spider have?",
-    "options": ["6", "8", "10", "12"],
-    "correctAnswerIndex": 1
+    "questionText": "What is the purpose of the toString() method?",
+    "options": ["Converts an object to a String", "Returns an objects memory address", "Compares two strings", "Converts a string to uppercase"],
+    "correctAnswerIndex": 0
   },
   {
     "questionText": "Which operator can be used to compare two values?",
@@ -90,38 +90,38 @@
     "correctAnswerIndex": 3
   },
   {
-    "questionText": "What is the opposite of 'hot'?",
-    "options": ["Warm", "Cool", "Cold", "Freezing"],
+    "questionText": "Which method is used to sort a list in Java?",
+    "options": ["Collections.sort()", "Arrays.sort()", "Both A and B", "sort()"],
     "correctAnswerIndex": 2
   },
   {
-    "questionText": "Which country is famous for pizza?",
-    "options": ["France", "Germany", "USA", "Italy"],
+    "questionText": "Which of these is not a type of loop in Java?",
+    "options": ["for", "while", "do-while", "foreach"],
     "correctAnswerIndex": 3
   },
   {
-    "questionText": "What do you call a baby cat?",
-    "options": ["Kitten", "Puppy", "Cub", "Calf"],
+    "questionText": "Which keyword is used to inherit a class in Java?",
+    "options": ["extends", "inherit", "extend", "super"],
     "correctAnswerIndex": 0
   },
   {
-    "questionText": "Which season comes after winter?",
-    "options": ["Summer", "Autumn", "Spring", "Rainy"],
+    "questionText": "Which method is used to compare two String objects for equality in Java?",
+    "options": ["==", "isEqual()", "equals()", "compareTo()"],
     "correctAnswerIndex": 2
   },
   {
-    "questionText": "What is the smallest unit of matter?",
-    "options": ["Molecule", "Atom", "Particle", "Electron"],
+    "questionText": "What is the result of 10 / 3 in Java if both operands are integers?",
+    "options": ["3.3333", "4", "Compilation error", "3"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "questionText": "What is the purpose of the this. keyword in Java?",
+    "options": ["Refers to the superclass", "Refers to the current object instance", "Refers to the current method", "Refers to a static variable"],
     "correctAnswerIndex": 1
   },
   {
-    "questionText": "What is 12 times 2?",
-    "options": ["22", "24", "26", "28"],
-    "correctAnswerIndex": 1
-  },
-  {
-    "questionText": "How many hours are there in a day?",
-    "options": ["20", "22", "24", "26"],
+    "questionText": "Which Java package contains the Scanner class?",
+    "options": ["java.io", "java.lang", "java.util", "java.text"],
     "correctAnswerIndex": 2
   }
 ]
