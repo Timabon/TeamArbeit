@@ -90,7 +90,6 @@ public class GameOverPageController {
         }
     }
 
-
     // Handle 'No' button click (Close the application)
     @FXML
     public void handleNoButton(ActionEvent actionEvent) {

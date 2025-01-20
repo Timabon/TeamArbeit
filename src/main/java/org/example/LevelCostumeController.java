@@ -32,6 +32,13 @@ public class LevelCostumeController {
         private boolean isFirstQuestion = true; // Flag to track if it's the first question
 
         public void initialize() throws IOException {
+
+            //Add hover effect
+            addHoverEffect(optionA);
+            addHoverEffect(optionB);
+            addHoverEffect(optionC);
+            addHoverEffect(optionD);
+
             // Load questions and initialize GameLogic
             QuestionLoader loader = new QuestionLoader();
             List<Question> questions = loader.loadQuestions("level_costume.json");

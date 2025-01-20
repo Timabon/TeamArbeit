@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="450.0" minWidth="800.0" prefHeight="450" prefWidth="800" style="-fx-background-image: url('/images/background.jpg'); -fx-background-size: cover; -fx-background-position: center;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.CustomInterfaceController">
+   <children>
+
+      <Label fx:id="customLabel" alignment="CENTER" layoutX="190.0" layoutY="70.0" prefHeight="120.0" prefWidth="420.0" style="-fx-background-color: blue; -fx-background-radius: 10px;" />
+
+      <!-- Costume Mode Label (Text) -->
+      <VBox alignment="CENTER" prefHeight="260.0" prefWidth="800.0" spacing="5" style="-fx-background-color: transparent;">
+         <Text style="-fx-font-size: 24px; -fx-fill: white;" text="Custom Mode?"/>
+         <Text style="-fx-font-size: 24px; -fx-fill: white;" text="Create your own quiz!"/>
+      </VBox>
+
+      <!-- Costume Mode Buttons: Play, New Question, Delete Question -->
+      <Button fx:id="customPlayButton" layoutX="325.0" layoutY="240.0" mnemonicParsing="false" onAction="#handleCustomPlay" prefHeight="35.0" prefWidth="150.0" style="-fx-font-size: 16px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 15px;" text="Play" />
+      <Button fx:id="customNewQuestionButton" layoutX="325.0" layoutY="290.0" mnemonicParsing="false" onAction="#handleCustomNewQuestion" prefHeight="35.0" prefWidth="150.0" style="-fx-font-size: 16px;-fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 15px;" text="New Question" />
+      <Button fx:id="customDeleteButton" layoutX="325.0" layoutY="340.0" mnemonicParsing="false" onAction="#handleCustomDelete" prefHeight="35.0" prefWidth="150.0" style="-fx-font-size: 16px;-fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 15px;" text="Delete Question" />
+      <Button fx:id="customExitButton" layoutX="325.0" layoutY="390.0" mnemonicParsing="false" onAction="#handleCustomExit" prefHeight="35.0" prefWidth="150.0" style="-fx-font-size: 16px;-fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 15px;" text="Exit"/>
+   </children>
+</AnchorPane>

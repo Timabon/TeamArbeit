@@ -17,10 +17,8 @@ import javafx.stage.Stage;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
-public class CostumeQuestionListController {
+public class CustomQuestionListController {
 
     @FXML
     private VBox questionContainer;
@@ -42,11 +40,39 @@ public class CostumeQuestionListController {
 
     @FXML
     public void initialize() {
+
+        //Adding hover effect
+        addHoverEffect(deleteSelectedButton);
+        addHoverEffect(deleteAllButton);
+        addHoverEffect(exitButton);
+
         loadQuestions();  // Load questions from the JSON file
         setupListView();  // Setup ListView to display questions
 
         // Allow multiple selections
         questionListView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+    }
+
+    private void addHoverEffect(Button button) {
+        // Mouse entered (hover)
+        button.setOnMouseEntered(event -> button.setStyle(
+                "-fx-font-size: 12px; -fx-text-fill: white; -fx-background-color: #005BB5; -fx-background-radius: 15px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 12, 0.7, 0, 4);"
+        ));
+
+        // Mouse exited
+        button.setOnMouseExited(event -> button.setStyle(
+                "-fx-font-size: 12px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 15px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 8, 0.5, 0, 2);"
+        ));
+
+        // Mouse pressed (click)
+        button.setOnMousePressed(event -> button.setStyle(
+                "-fx-font-size: 12px; -fx-text-fill: white; -fx-background-color: #003F7D; -fx-background-radius: 15px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 6, 0.3, 0, 1);"
+        ));
+
+        // Mouse released
+        button.setOnMouseReleased(event -> button.setStyle(
+                "-fx-font-size: 12px; -fx-text-fill: white; -fx-background-color: #005BB5; -fx-background-radius: 15px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 12, 0.7, 0, 4);"
+        ));
     }
 
     // Method to display the list of questions in the ListView
@@ -89,8 +115,6 @@ public class CostumeQuestionListController {
             System.out.println("Failed to update questions!");
         }
     }
-
-
     
     public void handleDeleteAllButton(ActionEvent actionEvent) {
         questions.clear();
@@ -110,14 +134,13 @@ public class CostumeQuestionListController {
             updateQuestionsFile();
 
             System.out.println("Deleted selected question(s).");
-
         }
     }
 
     public void handleExitButton(ActionEvent actionEvent) {
         try {
             // Load the Landing Page
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/costume_interface.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/custom_interface.fxml"));
             Scene landingScene = new Scene(loader.load());
 
             // Get the current stage and set the new scene

@@ -17,7 +17,7 @@ public class GameApp extends Application {
         FXMLLoader splashLoader = new FXMLLoader(getClass().getResource("/splash_screen.fxml"));
         Scene splashScene = new Scene(splashLoader.load());
         primaryStage.setScene(splashScene);
-        primaryStage.setTitle("Splash Screen");
+        primaryStage.setTitle("Guesstimate");
         primaryStage.show();
 
         // Get the SplashScreenController and pass the primaryStage

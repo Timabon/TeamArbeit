@@ -34,27 +34,27 @@ public class LandingPageController {
         custom.setStyle("-fx-font-size: 12px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 15px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 8, 0.5, 0, 2);");
 
     }
-        private void addHoverEffect (Button button){
-            // Mouse entered (hover)
-            button.setOnMouseEntered(event -> button.setStyle(
-                    "-fx-font-size: 12px; -fx-text-fill: white; -fx-background-color: #005BB5; -fx-background-radius: 15px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 12, 0.7, 0, 4);"
-            ));
+    private void addHoverEffect (Button button){
+        // Mouse entered (hover)
+        button.setOnMouseEntered(event -> button.setStyle(
+                "-fx-font-size: 12px; -fx-text-fill: white; -fx-background-color: #005BB5; -fx-background-radius: 15px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 12, 0.7, 0, 4);"
+        ));
 
-            // Mouse exited
-            button.setOnMouseExited(event -> button.setStyle(
-                    "-fx-font-size: 12px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 15px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 8, 0.5, 0, 2);"
-            ));
+        // Mouse exited
+        button.setOnMouseExited(event -> button.setStyle(
+                "-fx-font-size: 12px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 15px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 8, 0.5, 0, 2);"
+        ));
 
-            // Mouse pressed (click)
-            button.setOnMousePressed(event -> button.setStyle(
-                    "-fx-font-size: 12px; -fx-text-fill: white; -fx-background-color: #003F7D; -fx-background-radius: 15px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 6, 0.3, 0, 1);"
-            ));
+        // Mouse pressed (click)
+        button.setOnMousePressed(event -> button.setStyle(
+                "-fx-font-size: 12px; -fx-text-fill: white; -fx-background-color: #003F7D; -fx-background-radius: 15px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 6, 0.3, 0, 1);"
+        ));
 
-            // Mouse released
-            button.setOnMouseReleased(event -> button.setStyle(
-                    "-fx-font-size: 12px; -fx-text-fill: white; -fx-background-color: #005BB5; -fx-background-radius: 15px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 12, 0.7, 0, 4);"
-            ));
-        }
+        // Mouse released
+        button.setOnMouseReleased(event -> button.setStyle(
+                "-fx-font-size: 12px; -fx-text-fill: white; -fx-background-color: #005BB5; -fx-background-radius: 15px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 12, 0.7, 0, 4);"
+        ));
+    }
 
     @FXML
     public void handleLevel1(javafx.event.ActionEvent actionEvent) {
@@ -106,7 +106,7 @@ public class LandingPageController {
         custom.setDisable(true); // Disable the button
         try {
             // Load the Question Page
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/costume_interface.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/custom_interface.fxml"));
             Scene questionWriterScene = new Scene(loader.load());
 
             // Get the current stage and set the new scene

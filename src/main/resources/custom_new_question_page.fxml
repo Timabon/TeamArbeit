@@ -70,8 +70,8 @@
               <!-- VBox for positioning buttons vertically and stretching horizontally -->
               <VBox alignment="CENTER" prefWidth="600.0" spacing="20.0">
                   <HBox alignment="CENTER" prefWidth="600.0" spacing="20.0">
-                      <Button onAction="#saveQuestion" prefHeight="32.0" prefWidth="110.0" style="-fx-font-size: 14px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 15px; -fx-padding: 5;" text="Save" />
-                      <Button onAction="#exitApplication" prefHeight="32.0" prefWidth="110.0" style="-fx-font-size: 14px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 15px; -fx-padding: 5;" text="Exit" />
+                      <Button fx:id="saveButton" onAction="#saveQuestion" prefHeight="32.0" prefWidth="110.0" style="-fx-font-size: 14px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 15px; -fx-padding: 5;" text="Save" />
+                      <Button fx:id="exitButton" onAction="#exitApplication" prefHeight="32.0" prefWidth="110.0" style="-fx-font-size: 14px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 15px; -fx-padding: 5;" text="Exit" />
                   </HBox>
               </VBox>
          </children>

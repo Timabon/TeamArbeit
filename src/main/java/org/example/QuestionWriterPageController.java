@@ -7,7 +7,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
-import org.example.Question;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -42,6 +41,12 @@ public class QuestionWriterPageController {
     @FXML
     private RadioButton option4RadioButton;
 
+    @FXML
+    private Button saveButton;
+
+    @FXML
+    private Button exitButton;
+
     private ToggleGroup correctAnswerToggleGroup; // ToggleGroup for radio buttons
 
     private Stage currentStage;
@@ -59,6 +64,37 @@ public class QuestionWriterPageController {
         option2RadioButton.setToggleGroup(correctAnswerToggleGroup);
         option3RadioButton.setToggleGroup(correctAnswerToggleGroup);
         option4RadioButton.setToggleGroup(correctAnswerToggleGroup);
+
+        // Add hover effects to buttons
+        addHoverEffect(saveButton);
+        addHoverEffect(exitButton);
+
+        // Default button styles
+        saveButton.setStyle("-fx-font-size: 14px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 15px; -fx-padding: 5;");
+        exitButton.setStyle("-fx-font-size: 14px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 15px; -fx-padding: 5;");
+
+    }
+
+    private void addHoverEffect(Button button) {
+        // Mouse entered (hover)
+        button.setOnMouseEntered(event -> button.setStyle(
+                "-fx-font-size: 12px; -fx-text-fill: white; -fx-background-color: #005BB5; -fx-background-radius: 15px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 12, 0.7, 0, 4);"
+        ));
+
+        // Mouse exited
+        button.setOnMouseExited(event -> button.setStyle(
+                "-fx-font-size: 12px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 15px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 8, 0.5, 0, 2);"
+        ));
+
+        // Mouse pressed (click)
+        button.setOnMousePressed(event -> button.setStyle(
+                "-fx-font-size: 12px; -fx-text-fill: white; -fx-background-color: #003F7D; -fx-background-radius: 15px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 6, 0.3, 0, 1);"
+        ));
+
+        // Mouse released
+        button.setOnMouseReleased(event -> button.setStyle(
+                "-fx-font-size: 12px; -fx-text-fill: white; -fx-background-color: #005BB5; -fx-background-radius: 15px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 12, 0.7, 0, 4);"
+        ));
     }
 
     public void saveQuestion(ActionEvent actionEvent) {
@@ -139,8 +175,6 @@ public class QuestionWriterPageController {
         }
     }
 
-
-
     public void exitApplication(ActionEvent actionEvent) {
         clearFields();
         returnToInterfacePage(actionEvent);
@@ -159,7 +193,7 @@ public class QuestionWriterPageController {
     public void returnToInterfacePage(ActionEvent actionEvent){
         try {
             // Load the Landing Page
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/costume_interface.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/custom_interface.fxml"));
             Scene landingScene = new Scene(loader.load());
 
             // Get the current stage and set the new scene
