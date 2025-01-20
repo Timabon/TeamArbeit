@@ -36,16 +36,6 @@ public class GameOverPageController {
 
         // Ensure confettiPane has a valid size
         confettiPane.setPrefSize(800.0, 450.0); // Set the expected size of the pane
-
-//        // Debug: Check dimensions after layout
-//        confettiPane.layoutBoundsProperty().addListener((observable, oldValue, newValue) -> {
-//            System.out.println("ConfettiPane dimensions after layout: " + newValue.getWidth() + "x" + newValue.getHeight());
-//            if (newValue.getWidth() > 0 && newValue.getHeight() > 0) {
-//                System.out.println("ConfettiPane dimensions are valid!");
-//            } else {
-//                System.out.println("ConfettiPane dimensions are still invalid!");
-//            }
-//        });
     }
 
     // Setter to update the score label

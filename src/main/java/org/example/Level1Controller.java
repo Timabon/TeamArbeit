@@ -23,6 +23,8 @@ public class Level1Controller {
     private Button optionC;
     @FXML
     private Button optionD;
+    @FXML
+    private Label scoreLabel;
 
     private GameLogic gameLogic; // Instance of GameLogic
 
@@ -39,8 +41,18 @@ public class Level1Controller {
         addHoverEffect(optionB);
         addHoverEffect(optionC);
         addHoverEffect(optionD);
-        
+
+        // Other initialization logic...
+        scoreLabel.setText("Score: $0");
+
+        // Display initial score
+        updateScoreLabel();
         displayQuestion();
+    }
+    private void updateScoreLabel() {
+        if (scoreLabel != null) {
+            scoreLabel.setText("Score: $" + gameLogic.getPrizeAmount());
+        }
     }
 
     private void addHoverEffect(Button button) {
@@ -146,6 +158,7 @@ public class Level1Controller {
 
         if (isCorrect) {
             gameLogic.updatePrizeAmount(); // Update prize on correct answer
+            updateScoreLabel(); // Update score label
 
             // If it's the first question and correct, toggle the flag
             if (isFirstQuestion) {

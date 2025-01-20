@@ -11,7 +11,7 @@ public class GameLogic {
 
     public GameLogic(List<Question> questions) {
         this.questions = questions;
-        this.prizeAmounts = List.of(500, 1000, 2000, 4000, 8000, 16000, 32000, 64000, 125000, 250000, 500000, 1000000);
+        this.prizeAmounts = List.of(500, 1000, 2000, 3000, 5000, 7500, 10000, 15000, 20000, 30000, 40000, 50000, 75000, 100000, 150000, 200000, 250000, 300000, 400000, 500000, 600000, 700000, 800000, 900000, 1000000);
     }
 
     public Question getNextQuestion() {

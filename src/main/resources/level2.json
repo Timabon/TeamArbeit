@@ -16,7 +16,7 @@
   },
   {
     "questionText": "Which animal would make the best programmer?",
-    "options": ["A sloth (because it’s efficiently lazy)", "An octopus (lots of arms, lots of code)", " An owl (only works at night)", " A cat (does whatever it wants)"],
+    "options": ["A sloth (because it’s efficiently lazy)", "An octopus (lots of arms)", " An owl (only works at night)", " A cat (does whatever it wants)"],
     "correctAnswerIndex": 1
   },
   {
@@ -53,6 +53,71 @@
     "questionText": "Why did the server go to therapy?",
     "options": ["It couldn't handle the load", "It was clouded by emotions", "It had too many connections", "It couldn't find its root cause"],
     "correctAnswerIndex": 0
+  },
+  {
+    "questionText": "What does a 404 Error mean?",
+    "options": ["You’ve been hacked", "Page not found", "Your computer exploded", "Too many tabs open"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "questionText": "Why do programmers prefer dark mode?",
+    "options": ["To save battery life", "Because light attracts bugs", "It's more aesthetic", "They can't find the settings"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "questionText": "What’s the hardest thing about programming?",
+    "options": ["Debugging", "Learning new frameworks", "Naming variables", "Explaining it to non-programmers"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "questionText": "What’s the fastest way to finish a coding project?",
+    "options": ["Work overtime", "Hire more developers", "Ask ChatGPT", "Ctrl+C, Ctrl+V"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "questionText": "Why is \"Hello, World!\" every programmer’s first program?",
+    "options": ["It’s the only thing they know will work", "To say hello to bugs", "It’s a tradition", "It’s easy to type"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "questionText": "What does a programmer say when their code works on the first try?",
+    "options": ["This can’t be right", "I’m a genius!", "Did I really write this?", "I need coffee"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "questionText": "What is the most popular programming problem?",
+    "options": ["Too many bugs", "No documentation for trees", "Debugging is harder outside", "Missing a Semicolon"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "questionText": "What do you call a code that works but no one understands?",
+    "options": ["Art", "Legacy code", "Hacker magic", " Luck"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "questionText": "What is the best way to fix a bug?",
+    "options": ["Yell at your computer", "Turn it off and on again", " Add more bugs to distract it", " Debugging tools"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "questionText": "What does LOL mean in programming?",
+    "options": ["Laugh Out Loud", "Loop Over List", " Lots Of Logic", " Lost On Linux"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "questionText": "What is the most important skill for a programmer?",
+    "options": ["Coding", "Googling", "Typing really fast", "Drinking coffee"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "questionText": "Why did the server go to therapy?",
+    "options": ["It couldn't handle the load", "It was clouded by emotions", "It had too many connections", "It couldn't find its root cause"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "questionText": "What does a 404 Error mean?",
+    "options": ["You’ve been hacked", "Page not found", "Your computer exploded", "Too many tabs open"],
+    "correctAnswerIndex": 1
   },
   {
     "questionText": "What does a 404 Error mean?",
