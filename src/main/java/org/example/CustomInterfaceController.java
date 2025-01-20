@@ -108,6 +108,7 @@ public class CustomInterfaceController {
         }
     }
 
+
     public void handleCustomDelete(ActionEvent actionEvent) {
         try {
             // Load the Costume_Question_List for deleting questions(s)

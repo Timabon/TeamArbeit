@@ -18,6 +18,7 @@ public class GameApp extends Application {
         Scene splashScene = new Scene(splashLoader.load());
         primaryStage.setScene(splashScene);
         primaryStage.setTitle("Guesstimate");
+        primaryStage.setResizable(false); // Disable resizing
         primaryStage.show();
 
         // Get the SplashScreenController and pass the primaryStage
