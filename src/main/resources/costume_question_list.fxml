@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.CostumeQuestionListController">
+
+    <VBox alignment="CENTER" prefHeight="450.0" prefWidth="800.0" spacing="10">
+      <HBox prefHeight="400.0" prefWidth="800.0">
+         <children>
+              <ScrollPane fitToHeight="true" fitToWidth="true">
+                  <ListView fx:id="questionListView" prefWidth="780.0" prefHeight="300.0"/>
+              </ScrollPane>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="800.0" spacing="20">
+         <children>
+              <Button fx:id="deleteSelectedButton" depthTest="DISABLE" onAction="#handleDeleteSelectedButton" prefHeight="32.0" prefWidth="110.0" style="-fx-font-size: 14px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 15px; -fx-padding: 5;" text="Delete Selected" />
+             <Button fx:id="deleteAllButton" onAction="#handleDeleteAllButton" prefHeight="32.0" prefWidth="110.0" style="-fx-font-size: 14px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 15px; -fx-padding: 5;" text="Delete All" />
+             <Button fx:id="exitButton" onAction="#handleExitButton" prefHeight="32.0" prefWidth="110.0" style="-fx-font-size: 14px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 15px; -fx-padding: 5;" text="Exit" />
+
+         </children>
+      </HBox>
+    </VBox>
+
+
+
+</AnchorPane>

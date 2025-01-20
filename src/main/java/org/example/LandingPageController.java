@@ -106,7 +106,7 @@ public class LandingPageController {
         custom.setDisable(true); // Disable the button
         try {
             // Load the Question Page
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/question_writer_page.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/costume_interface.fxml"));
             Scene questionWriterScene = new Scene(loader.load());
 
             // Get the current stage and set the new scene

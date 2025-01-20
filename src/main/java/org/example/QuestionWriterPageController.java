@@ -14,8 +14,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class QuestionWriterPageController {
-    //path to "database" file
-    private final String filePath = "src/main/resources/questions.json";
 
     @FXML
     private TextArea questionTextField;
@@ -114,6 +112,8 @@ public class QuestionWriterPageController {
             List<Question> questionList = new ArrayList<>();
 
             // If the file already exists, load existing questions
+            //path to "database" file
+            String filePath = "src/main/resources/level_costume.json";
             File file = new File(filePath);
             if (file.exists() && file.length() > 0) {
                 BufferedReader reader = new BufferedReader(new FileReader(filePath));
@@ -131,7 +131,7 @@ public class QuestionWriterPageController {
 
             System.out.println("Question saved successfully!");
             clearFields();
-            returnToLandingPage(actionEvent);
+            returnToInterfacePage(actionEvent);
 
         } catch (IOException e) {
             // Handle exceptions if saving the question fails
@@ -144,7 +144,7 @@ public class QuestionWriterPageController {
 
     public void exitApplication(ActionEvent actionEvent) {
         clearFields();
-        returnToLandingPage(actionEvent);
+        returnToInterfacePage(actionEvent);
     }
 
     private void clearFields() {
@@ -157,10 +157,10 @@ public class QuestionWriterPageController {
     }
 
     @FXML
-    public void returnToLandingPage(ActionEvent actionEvent){
+    public void returnToInterfacePage(ActionEvent actionEvent){
         try {
             // Load the Landing Page
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/landing_page.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/costume_interface.fxml"));
             Scene landingScene = new Scene(loader.load());
 
             // Get the current stage and set the new scene
