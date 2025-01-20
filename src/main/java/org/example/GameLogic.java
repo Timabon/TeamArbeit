@@ -4,10 +4,10 @@ package org.example;
 import java.util.List;
 
 public class GameLogic {
-    private int currentQuestionIndex = 0; // Aktuelle Frage
-    private int prizeAmount = 0;         // Aktueller Gewinn
-    private List<Question> questions;   // Liste der Fragen
-    private List<Integer> prizeAmounts; // Gewinnstufen
+    private int currentQuestionIndex = 0; // Current question
+    private int prizeAmount = 0;         // Current profit
+    private List<Question> questions;   // list of questions
+    private List<Integer> prizeAmounts; // prize levels
 
     public GameLogic(List<Question> questions) {
         this.questions = questions;
@@ -18,7 +18,7 @@ public class GameLogic {
         if (currentQuestionIndex < questions.size()) {
             return questions.get(currentQuestionIndex++);
         }
-        return null; // Keine weiteren Fragen
+        return null; // No further questions
     }
 
     public boolean checkAnswer(int selectedIndex) {
