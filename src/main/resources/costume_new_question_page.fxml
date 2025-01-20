@@ -25,16 +25,16 @@
                               <!-- GridPane for layout (2 columns, 7 rows) -->
                               <GridPane alignment="CENTER" hgap="10.0" prefWidth="560.0" vgap="10.0">
                                   <!-- Heading for New Question -->
-                                  <Label alignment="CENTER" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: white; -fx-background-radius: 10; -fx-padding: 10;" text="New Question:" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0" />
+                                  <Label alignment="CENTER" prefHeight="32.0" prefWidth="110.0" style="-fx-font-size: 14px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 15px; -fx-padding: 5;" text="New Question:" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0" />
       
                                   <!-- TextArea for Question -->
                                   <TextArea fx:id="questionTextField" prefHeight="80.0" promptText="Enter question text" text="&#10;&#10;&#10;" wrapText="true" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="1" />
       
                                   <!-- Label for Possible Answers -->
-                                  <Label style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 5;" text="Possible Answers" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                                  <Label prefHeight="31.0" prefWidth="122.0" style="-fx-font-size: 14px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 15px; -fx-padding: 5;" text="Possible Answers" GridPane.columnIndex="0" GridPane.rowIndex="2" />
       
                                   <!-- Label for Correct Answer -->
-                                  <Label style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 5;" text="Correct" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                  <Label prefHeight="32.0" prefWidth="110.0" style="-fx-font-size: 14px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 15px; -fx-padding: 5;" text="Correct" GridPane.columnIndex="1" GridPane.rowIndex="2" />
       
                                   <!-- Text fields for the answer options -->
                                   <TextField fx:id="option1TextField" promptText="Option 1" GridPane.columnIndex="0" GridPane.rowIndex="3" />
@@ -48,8 +48,8 @@
                                   <RadioButton fx:id="option3RadioButton" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
                                   <RadioButton fx:id="option4RadioButton" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
                                   <columnConstraints>
-                                      <ColumnConstraints maxWidth="367.3333333333333" minWidth="148.66666666666666" prefWidth="236.66666666666666" />
-                                      <ColumnConstraints maxWidth="315.0" minWidth="25.33333333333337" prefWidth="53.33333333333334" />
+                                      <ColumnConstraints maxWidth="367.3333333333333" minWidth="148.66666666666666" prefWidth="230.66666666666666" />
+                                      <ColumnConstraints maxWidth="315.0" minWidth="25.33333333333337" prefWidth="59.33333333333334" />
                                   </columnConstraints>
                                   <rowConstraints>
                                       <RowConstraints />
@@ -70,8 +70,8 @@
               <!-- VBox for positioning buttons vertically and stretching horizontally -->
               <VBox alignment="CENTER" prefWidth="600.0" spacing="20.0">
                   <HBox alignment="CENTER" prefWidth="600.0" spacing="20.0">
-                      <Button onAction="#saveQuestion" style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 5;" text="Save" />
-                      <Button onAction="#exitApplication" style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 5;" text="Exit" />
+                      <Button onAction="#saveQuestion" prefHeight="32.0" prefWidth="110.0" style="-fx-font-size: 14px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 15px; -fx-padding: 5;" text="Save" />
+                      <Button onAction="#exitApplication" prefHeight="32.0" prefWidth="110.0" style="-fx-font-size: 14px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 15px; -fx-padding: 5;" text="Exit" />
                   </HBox>
               </VBox>
          </children>

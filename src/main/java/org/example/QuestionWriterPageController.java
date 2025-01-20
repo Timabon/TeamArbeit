@@ -131,7 +131,6 @@ public class QuestionWriterPageController {
 
             System.out.println("Question saved successfully!");
             clearFields();
-            returnToInterfacePage(actionEvent);
 
         } catch (IOException e) {
             // Handle exceptions if saving the question fails

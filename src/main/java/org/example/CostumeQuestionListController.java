@@ -94,8 +94,6 @@ public class CostumeQuestionListController {
     
     public void handleDeleteAllButton(ActionEvent actionEvent) {
         questions.clear();
-        Question defaultQuestion = new Question("Question: there are no costume question yet", List.of("click here", "...", "...", "..."), -1);
-        questions.add(defaultQuestion);
         updateQuestionsFile();
     }
 

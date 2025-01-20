@@ -26,6 +26,7 @@
             <Button fx:id="costumePlayButton" mnemonicParsing="false" onAction="#handleCostumePlay" prefHeight="35.0" prefWidth="150.0" style="-fx-font-size: 16px; -fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 15px;" text="Play" />
             <Button fx:id="costumeNewQuestionButton" mnemonicParsing="false" onAction="#handleCostumeNewQuestion" prefHeight="35.0" prefWidth="150.0" style="-fx-font-size: 16px;-fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 15px;" text="New Question" />
             <Button fx:id="costumeDeleteButton" mnemonicParsing="false" onAction="#handleCostumeDelete" prefHeight="35.0" prefWidth="150.0" style="-fx-font-size: 16px;-fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 15px;" text="Delete Question" />
+            <Button fx:id="costumeExitButton" mnemonicParsing="false" text="Exit" onAction="#handleCostumeExit" prefHeight="35.0" prefWidth="150.0" style="-fx-font-size: 16px;-fx-text-fill: white; -fx-background-color: blue; -fx-background-radius: 15px;"/>
          </children>
          <opaqueInsets>
             <Insets />
